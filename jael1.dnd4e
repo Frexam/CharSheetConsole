@@ -1,0 +1,1936 @@
+<D20Character game-system="D&amp;D4E" Version="0.07a" legality="rules-legal" >
+   <!--
+      Dungeons and Dragons Insider: Character Builder character save file
+   -->
+
+
+   <CharacterSheet>
+
+
+      <Details>
+         <name> Jael </name>
+         <Level> 1 </Level>
+         <Player>  </Player>
+         <Height> 6&apos;5&quot; </Height>
+         <Weight> 180 </Weight>
+         <Gender>  </Gender>
+         <Age> 19 </Age>
+         <Alignment>  </Alignment>
+         <Company>  </Company>
+         <Portrait>  </Portrait>
+         <Experience>  </Experience>
+         <CarriedMoney> 40 gp </CarriedMoney>
+         <StoredMoney> 0 gp </StoredMoney>
+         <Traits>  </Traits>
+         <Appearance>  </Appearance>
+         <Companions>  </Companions>
+         <Notes>  </Notes>
+      </Details>
+
+      <!--
+         Base ability scores (see stats of same name for final adjusted score)
+      -->
+      <AbilityScores legality="rules-legal" >
+         <Strength score="10" />
+         <Constitution score="14" />
+         <Dexterity score="10" />
+         <Intelligence score="9" />
+         <Wisdom score="18" />
+         <Charisma score="10" />
+      </AbilityScores>
+
+
+      <!--
+         Final computed stat values - the various numbers
+         on the character sheet are here along with behind the scenes
+         values to build them.
+      -->
+      <StatBlock>
+         <Stat value="10" >
+            <alias name="Strength" />
+            <alias name="STR" />
+            <statadd value="10" />
+         </Stat>
+
+         <Stat value="14" >
+            <alias name="Constitution" />
+            <alias name="con" />
+            <statadd value="14" />
+         </Stat>
+
+         <Stat value="10" >
+            <alias name="Dexterity" />
+            <alias name="DEX" />
+            <statadd value="10" />
+         </Stat>
+
+         <Stat value="11" >
+            <alias name="Intelligence" />
+            <alias name="INT" />
+            <statadd value="9" />
+            <statadd Level="1" value="2" charelem="1" />
+         </Stat>
+
+         <Stat value="20" >
+            <alias name="Wisdom" />
+            <alias name="WIS" />
+            <statadd value="18" />
+            <statadd Level="1" value="2" charelem="2" />
+         </Stat>
+
+         <Stat value="10" >
+            <alias name="Charisma" />
+            <alias name="CHA" />
+            <statadd value="10" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Strength modifier" />
+            <statadd Level="1" value="1" statlink="Strength" abilmod="true" charelem="3" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Dexterity modifier" />
+            <statadd Level="1" value="1" statlink="Dexterity" abilmod="true" charelem="3" />
+         </Stat>
+
+         <Stat value="2" >
+            <alias name="Constitution modifier" />
+            <statadd Level="1" value="1" statlink="Constitution" abilmod="true" charelem="3" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Intelligence modifier" />
+            <statadd Level="1" value="1" statlink="Intelligence" abilmod="true" charelem="3" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Wisdom modifier" />
+            <statadd Level="1" value="1" statlink="Wisdom" abilmod="true" charelem="3" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Charisma modifier" />
+            <statadd Level="1" value="1" statlink="Charisma" abilmod="true" charelem="3" />
+         </Stat>
+
+         <Stat value="16" >
+            <alias name="AC" />
+            <alias name="Armor Class" />
+            <statadd Level="1" value="10" charelem="3" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="3" />
+            <statadd type="Ability" Level="1" not-wearing="armor:heavy" value="1" statlink="Dexterity" abilmod="true" charelem="3" />
+            <statadd type="Ability" Level="1" not-wearing="armor:heavy" value="1" statlink="Intelligence" abilmod="true" charelem="3" />
+            <statadd type="Defensive" Level="1" wearing="DEFENSIVE:" value="1" charelem="3" />
+            <statadd Level="1" conditional="against attacks made by bloodied creatures" value="1" charelem="4" />
+            <statadd type="Armor" Level="1" value="6" charelem="5" />
+         </Stat>
+
+         <Stat value="13" >
+            <alias name="Fortitude Defense" />
+            <alias name="Fortitude" />
+            <statadd Level="1" value="10" charelem="3" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="3" />
+            <statadd type="Ability" Level="1" value="1" statlink="Strength" abilmod="true" charelem="3" />
+            <statadd type="Ability" Level="1" value="1" statlink="Constitution" abilmod="true" charelem="3" />
+            <statadd type="Class" Level="1" value="1" statlink="Fortitude Defense Class Bonus" charelem="3" />
+            <statadd Level="1" conditional="against attacks made by bloodied creatures" value="1" charelem="4" />
+         </Stat>
+
+         <Stat value="11" >
+            <alias name="Reflex Defense" />
+            <alias name="Reflex" />
+            <statadd Level="1" value="10" charelem="3" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="3" />
+            <statadd type="Ability" Level="1" value="1" statlink="Dexterity" abilmod="true" charelem="3" />
+            <statadd type="Ability" Level="1" value="1" statlink="Intelligence" abilmod="true" charelem="3" />
+            <statadd type="Class" Level="1" value="1" statlink="Reflex Defense Class Bonus" charelem="3" />
+            <statadd Level="1" conditional="against attacks made by bloodied creatures" value="1" charelem="4" />
+            <statadd Level="1" requires="!Armor Proficiency (Chainmail)" value="-2" charelem="5" />
+         </Stat>
+
+         <Stat value="16" >
+            <alias name="Will Defense" />
+            <alias name="Will" />
+            <statadd Level="1" value="10" charelem="3" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="3" />
+            <statadd type="Ability" Level="1" value="1" statlink="Wisdom" abilmod="true" charelem="3" />
+            <statadd type="Ability" Level="1" value="1" statlink="Charisma" abilmod="true" charelem="3" />
+            <statadd type="Class" Level="1" value="1" statlink="Will Defense Class Bonus" charelem="3" />
+            <statadd Level="1" conditional="against attacks made by bloodied creatures" value="1" charelem="4" />
+         </Stat>
+
+         <Stat value="3" >
+            <alias name="Death Saves Count" />
+            <statadd Level="1" value="3" charelem="3" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="Level" />
+            <statadd Level="1" value="1" charelem="3" />
+         </Stat>
+
+         <Stat value="24" >
+            <alias name="Hit Points" />
+            <statadd type="Level 1" Level="1" value="1" statlink="Constitution" charelem="3" />
+            <statadd Level="1" value="1" statlink="_LEVEL-ONE-HPS" charelem="3" />
+         </Stat>
+
+         <Stat value="10" >
+            <alias name="_LEVEL-ONE-HPS" />
+            <statadd Level="1" value="10" charelem="6" />
+         </Stat>
+
+         <Stat value="8" >
+            <alias name="Healing Surges" />
+            <statadd type="Level 1" Level="1" requires="!NoConToHealingSurges" value="1" statlink="Constitution" abilmod="true" charelem="3" />
+            <statadd type="Class" Level="1" value="6" charelem="6" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="HALF-LEVEL" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="Fortitude Defense Class Bonus" />
+            <statadd Level="1" value="1" charelem="6" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="Reflex Defense Class Bonus" />
+            <statadd Level="1" value="1" charelem="6" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="Will Defense Class Bonus" />
+            <statadd Level="1" value="1" charelem="6" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Initiative" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="3" />
+            <statadd type="Ability" Level="1" value="1" statlink="Dexterity" abilmod="true" charelem="3" />
+            <statadd Level="1" value="1" statlink="Initiative Misc" charelem="3" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Initiative Misc" />
+         </Stat>
+
+         <Stat value="2" >
+            <alias name="Ring Slots" />
+            <statadd Level="1" value="2" charelem="3" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="_BaseActionPoints" />
+            <statadd Level="1" value="1" charelem="3" />
+         </Stat>
+
+         <Stat value="1000" >
+            <alias name="XP Needed" />
+            <statadd Level="1" value="1000" charelem="3" />
+         </Stat>
+
+         <Stat value="-1" >
+            <alias name="Acrobatics" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Dexterity" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Acrobatics Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Acrobatics Misc" charelem="7" />
+            <statadd type="Armor Penalty" Level="1" value="1" statlink="Armor Penalty" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Acrobatics Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Acrobatics Misc" />
+         </Stat>
+
+         <Stat value="-1" >
+            <alias name="Armor Penalty" />
+            <statadd type="Chain" Level="1" value="-1" charelem="5" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Arcana" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Intelligence" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Arcana Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Arcana Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Arcana Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Arcana Misc" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Bluff" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Charisma" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Bluff Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Bluff Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Bluff Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Bluff Misc" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Diplomacy" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Charisma" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Diplomacy Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Diplomacy Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Diplomacy Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Diplomacy Misc" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Dungeoneering" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Wisdom" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Dungeoneering Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Dungeoneering Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Dungeoneering Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Dungeoneering Misc" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="Endurance" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Constitution" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Endurance Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Endurance Misc" charelem="7" />
+            <statadd type="Armor Penalty" Level="1" value="1" statlink="Armor Penalty" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Endurance Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Endurance Misc" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Heal" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Wisdom" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Heal Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Heal Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Heal Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Heal Misc" />
+         </Stat>
+
+         <Stat value="7" >
+            <alias name="History" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Intelligence" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="History Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="History Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="History Trained" />
+            <statadd type="trained" Level="1" value="5" charelem="8" />
+         </Stat>
+
+         <Stat value="2" >
+            <alias name="History Misc" />
+            <statadd type="Racial" Level="1" value="2" charelem="9" />
+         </Stat>
+
+         <Stat value="10" >
+            <alias name="Insight" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Wisdom" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Insight Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Insight Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Insight Trained" />
+            <statadd type="trained" Level="1" value="5" charelem="10" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Insight Misc" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Intimidate" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Charisma" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Intimidate Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Intimidate Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Intimidate Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Intimidate Misc" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Nature" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Wisdom" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Nature Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Nature Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Nature Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Nature Misc" />
+         </Stat>
+
+         <Stat value="10" >
+            <alias name="Perception" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Wisdom" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Perception Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Perception Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Perception Trained" />
+            <statadd type="trained" Level="1" value="5" charelem="11" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Perception Misc" />
+         </Stat>
+
+         <Stat value="7" >
+            <alias name="Religion" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Intelligence" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Religion Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Religion Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Religion Trained" />
+            <statadd type="trained" Level="1" value="5" charelem="12" />
+         </Stat>
+
+         <Stat value="2" >
+            <alias name="Religion Misc" />
+            <statadd type="Racial" Level="1" value="2" charelem="13" />
+         </Stat>
+
+         <Stat value="-1" >
+            <alias name="Stealth" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Dexterity" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Stealth Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Stealth Misc" charelem="7" />
+            <statadd type="Armor Penalty" Level="1" value="1" statlink="Armor Penalty" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Stealth Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Stealth Misc" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Streetwise" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Charisma" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Streetwise Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Streetwise Misc" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Streetwise Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Streetwise Misc" />
+         </Stat>
+
+         <Stat value="-1" >
+            <alias name="Thievery" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Dexterity" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Thievery Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Thievery Misc" charelem="7" />
+            <statadd type="Armor Penalty" Level="1" value="1" statlink="Armor Penalty" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Thievery Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Thievery Misc" />
+         </Stat>
+
+         <Stat value="-1" >
+            <alias name="Athletics" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="7" />
+            <statadd type="Ability" Level="1" value="1" statlink="Strength" abilmod="true" charelem="7" />
+            <statadd Level="1" value="1" statlink="Athletics Trained" charelem="7" />
+            <statadd Level="1" value="1" statlink="Athletics Misc" charelem="7" />
+            <statadd type="Armor Penalty" Level="1" value="1" statlink="Armor Penalty" charelem="7" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Athletics Trained" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Athletics Misc" />
+         </Stat>
+
+         <Stat value="20" >
+            <alias name="Passive Perception" />
+            <statadd Level="1" value="1" statlink="Perception" charelem="7" />
+            <statadd Level="1" value="10" charelem="7" />
+         </Stat>
+
+         <Stat value="20" >
+            <alias name="Passive Insight" />
+            <statadd Level="1" value="1" statlink="Insight" charelem="7" />
+            <statadd Level="1" value="10" charelem="7" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Speed" />
+            <statadd Level="1" value="6" charelem="14" />
+            <statadd type="Armor" Level="1" value="-1" charelem="5" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Average Height" />
+            <statadd String="6&apos;1&quot;-6&apos;6&quot;" Level="1" value="0" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Average Weight" />
+            <statadd String="175-280 lb." Level="1" value="0" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="Size" />
+            <statadd String="Medium" Level="1" value="0" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="Astral Resistance" />
+            <statadd Level="1" value="5" charelem="15" />
+            <statadd Level="1" value="1" statlink="HALF-LEVEL" charelem="15" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="resist:necrotic" />
+            <statadd type="resist" Level="1" value="1" statlink="Astral Resistance" charelem="15" />
+         </Stat>
+
+         <Stat value="5" >
+            <alias name="resist:radiant" />
+            <statadd type="resist" Level="1" value="1" statlink="Astral Resistance" charelem="15" />
+         </Stat>
+
+         <Stat value="3" >
+            <alias name="Language Count" />
+            <statadd Level="1" value="1" charelem="16" />
+            <statadd Level="1" value="1" charelem="17" />
+            <statadd Level="1" value="1" charelem="18" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="_CLASSNAME" />
+            <statadd String="ID_FMP_CLASS_127" Level="1" value="0" />
+         </Stat>
+
+         <Stat value="4" >
+            <alias name="_PER-LEVEL-HPS" />
+            <statadd Level="1" value="4" charelem="6" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="Staff Expertise" />
+            <statadd Level="1" value="1" charelem="19" />
+            <statadd Level="1" requires="Paragon Tier" value="1" charelem="19" />
+            <statadd Level="1" requires="Epic Tier" value="1" charelem="19" />
+         </Stat>
+
+         <Stat value="1" >
+            <alias name="staff:attack" />
+            <statadd type="Feat" Level="1" value="1" statlink="Staff Expertise" charelem="19" />
+         </Stat>
+
+         <Stat value="77" >
+            <alias name="Weight" />
+            <statadd value="77" />
+         </Stat>
+
+         <Stat value="0" >
+            <alias name="attack rolls" />
+            <statadd Level="1" requires="!Armor Proficiency (Chainmail)" value="-2" charelem="5" />
+         </Stat>
+
+      </StatBlock>
+
+      <!--
+         The list of all rules elements the character has, after taking into
+         account retraining, multiclass power swapping, etc.
+      -->
+      <RulesElementTally>
+         <RulesElement name="1" type="Level" internal-id="ID_INTERNAL_LEVEL_1" charelem="3" legality="rules-legal" >
+            <specific name="XP Needed" > 1000 </specific>
+         </RulesElement>
+         <RulesElement name="Level1Rules" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_LEVEL1RULES" charelem="20" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="SkillRules" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_SKILLRULES" charelem="7" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Acrobatics" type="Skill" internal-id="ID_FMP_SKILL_1" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=1" charelem="21" legality="rules-legal" >
+            <specific name="Key Ability" > Dexterity </specific>
+         Creatures typically use the Acrobatics skill to maintain their balance while walking on narrow or unstable surfaces, to slip free of a grab or restraints, and to take less damage from a fall.	Moving across a surface that is slippery doesn&apos;t usually require an Acrobatics check; that surface is instead treated as difficult terrain. If a surface is extremely slippery, the DM might require an Acrobatics check to cross it.
+         </RulesElement>
+         <RulesElement name="Arcana" type="Skill" internal-id="ID_FMP_SKILL_2" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=2" charelem="22" legality="rules-legal" >
+            <specific name="Key Ability" > Intelligence </specific>
+         The Arcana skill encompasses knowledge about magic-related lore and magical effects. Training in this skill represents academic study, either formalized or as a hobby. This knowledge can touch on any source of magical power—whether arcane, divine, primal, or another one—and extends to information about the following planes of existence, including the creatures native to those planes: the Elemental Chaos, the Feywild, and the Shadowfell. Those that have training in Arcana also have a chance to know something about the mysterious Far Realm, but not about its creatures (such knowledge falls under the Dungeoneering skill). A creature can sometimes use its knowledge of magic to interact with or manipulate magical phenomena.
+         </RulesElement>
+         <RulesElement name="Bluff" type="Skill" internal-id="ID_FMP_SKILL_3" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=3" charelem="23" legality="rules-legal" >
+            <specific name="Key Ability" > Charisma </specific>
+         Characters use the Bluff skill to make what&apos;s false seem true, what&apos;s outrageous seem plausible, and what&apos;s suspicious seem ordinary. A character makes a Bluff check to fast-talk a guard, con a merchant, gamble, pass off a disguise, fake a piece of documentation, or mislead in some other way.
+         </RulesElement>
+         <RulesElement name="Diplomacy" type="Skill" internal-id="ID_FMP_SKILL_6" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=6" charelem="24" legality="rules-legal" >
+            <specific name="Key Ability" > Charisma </specific>
+         Creatures use the Diplomacy skill to influence others using tact, subtlety, and social grace. (Monsters rarely make Diplomacy checks.) Make a  diplomacy check to change opinions, inspire good will, haggle with a merchant, demonstrate proper etiquette and decorum, or negotiate a deal in good faith.
+         </RulesElement>
+         <RulesElement name="Dungeoneering" type="Skill" internal-id="ID_FMP_SKILL_7" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=7" charelem="25" legality="rules-legal" >
+            <specific name="Key Ability" > Wisdom </specific>
+         The Dungeoneering skill represents knowledge and skills related to dungeon exploration, including finding one&apos;s way through underground complexes, navigating winding caverns, recognizing subterranean hazards, and foraging for food in the Underdark.	Training in this skill represents formalized study or extensive experience. Those that have training in the skill can also identify creatures of the Far Realm.
+         </RulesElement>
+         <RulesElement name="Endurance" type="Skill" internal-id="ID_FMP_SKILL_8" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=8" charelem="26" legality="rules-legal" >
+            <specific name="Key Ability" > Constitution </specific>
+         The Endurance skill is used to stave off ill effects and to push beyond normal physical limits. A creature that has training in Endurance can hold its breath for long periods of time, forestall the debilitating effects of hunger and thirst, and swim or tread water for extended periods. Some hazards—including extreme temperatures, violent weather, and diseases—require creatures to make Endurance checks to resist or delay debilitating effects.	Characters rarely use Endurance actively; the DM directs players to use it in response to certain hazards. Using the skill in that way requires no action, unless otherwise noted. See “Environmental Dangers” and “Disease” for some of the situations that require Endurance checks.
+         </RulesElement>
+         <RulesElement name="Heal" type="Skill" internal-id="ID_FMP_SKILL_9" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=9" charelem="27" legality="rules-legal" >
+            <specific name="Key Ability" > Wisdom </specific>
+         The Heal skill is used to help others recover from wounds or debilitating conditions, including disease.
+         </RulesElement>
+         <RulesElement name="History" type="Skill" internal-id="ID_FMP_SKILL_11" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=11" charelem="28" legality="rules-legal" >
+            <specific name="Key Ability" > Intelligence </specific>
+         The History skill encompasses knowledge related to the history of a region and beyond, including the chronological record of significant events and an explanation of their causes. This knowledge includes information pertaining to royalty and other leaders, wars, legends, important personalities, laws, customs, traditions, and memorable events.	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric historical information.	Make a History check to remember a relevant piece of historical lore or to recognize a historical clue (see “Knowledge Checks”).
+         </RulesElement>
+         <RulesElement name="Insight" type="Skill" internal-id="ID_FMP_SKILL_13" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=13" charelem="29" legality="rules-legal" >
+            <specific name="Key Ability" > Wisdom </specific>
+         The Insight skill is used to discern intent and decipher body language during social interactions. Characters use the skill to comprehend motives, to read between the lines, to get a sense of moods and attitudes, and to determine how truthful someone is being. (Monsters rarely use Insight.)	Insight is used to oppose Bluff checks and as the social counterpart to the Perception skill. The skill can also be used to gain clues, to figure out how well a social situation is going, and to determine if someone is under the influence of an outside force.	When a creature uses Insight, it is making a best guess about another creature&apos;s motives and truthfulness. Insight is not an exact science or a supernatural power; it represents the ability to get a sense of how a person is behaving.
+         </RulesElement>
+         <RulesElement name="Intimidate" type="Skill" internal-id="ID_FMP_SKILL_14" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=14" charelem="30" legality="rules-legal" >
+            <specific name="Key Ability" > Charisma </specific>
+         An adventurer can make an Intimidate check to influence others through hostile actions, overt threats, or deadly persuasion. (Monsters can&apos;t intimidate adventurers.)
+         </RulesElement>
+         <RulesElement name="Nature" type="Skill" internal-id="ID_FMP_SKILL_16" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=16" charelem="31" legality="rules-legal" >
+            <specific name="Key Ability" > Wisdom </specific>
+         The Nature skill encompasses knowledge and skills related to nature, including finding ways through wilderness, recognizing natural hazards, dealing with and identifying natural creatures, and living off the land. 	Training in this skill represents formalized study or extensive experience. Those that have training in the skill are likely to know esoteric information in the field of study.
+         </RulesElement>
+         <RulesElement name="Perception" type="Skill" internal-id="ID_FMP_SKILL_17" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=17" charelem="32" legality="rules-legal" >
+            <specific name="Key Ability" > Wisdom </specific>
+         The Perception skill encompasses perceiving things, most often by sight or sound. Make a Perception check to notice a clue, detect a secret door, find a trap, follow tracks, listen for sounds behind a closed door, or locate a hidden object.	In most situations, the DM uses passive Perception to determine if a creature notices things. A creature that has fallen asleep naturally (as opposed to being knocked unconscious by a power or other effect) is unconscious, but not totally deprived of awareness; it can use its passive Perception to hear things, but with a -5 penalty.
+         </RulesElement>
+         <RulesElement name="Religion" type="Skill" internal-id="ID_FMP_SKILL_18" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=18" charelem="33" legality="rules-legal" >
+            <specific name="Key Ability" > Intelligence </specific>
+         The Religion skill encompasses knowledge about gods, sacred writings, religious ceremonies, holy symbols, and theology. This knowledge extends to information about the undead and about the Astral Sea, including the creatures of that plane.	Training in this skill represents academic study, either formalized or as a hobby. Those that have training in the skill are likely to know esoteric information in the field of study.
+         </RulesElement>
+         <RulesElement name="Stealth" type="Skill" internal-id="ID_FMP_SKILL_20" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=20" charelem="34" legality="rules-legal" >
+            <specific name="Key Ability" > Dexterity </specific>
+         Creatures use the Stealth skill to conceal themselves from enemies, slink past guards, slip away without being noticed, and sneak up on others without being detected.
+         </RulesElement>
+         <RulesElement name="Streetwise" type="Skill" internal-id="ID_FMP_SKILL_21" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=21" charelem="35" legality="rules-legal" >
+            <specific name="Key Ability" > Charisma </specific>
+         The Streetwise skill encompasses knowledge of the ins and outs of life in a settlement (a village, a town, or a city), whether on its main streets or in its back alleys. This knowledge is gleaned from talking to people and observing them as they go about their lives, rather than from studying tomes or maps. A character who has training in this skill is especially adept at getting information out of people living in settlements.	When in a settlement, make a Streetwise check to find out what&apos;s going on, who the movers and shakers are, where to get the best deals, and where the dangers are.
+         </RulesElement>
+         <RulesElement name="Thievery" type="Skill" internal-id="ID_FMP_SKILL_23" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=23" charelem="36" legality="rules-legal" >
+            <specific name="Key Ability" > Dexterity </specific>
+         The Thievery skill encompasses various abilities that require nerves of steel and a steady hand: disabling traps, opening locks, picking pockets, and sleight of hand.	The DM might decide that some uses of this skill are so specialized that a creature is required to have training in Thievery to have a chance of succeeding.
+         </RulesElement>
+         <RulesElement name="Athletics" type="Skill" internal-id="ID_FMP_SKILL_27" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=27" charelem="37" legality="rules-legal" >
+            <specific name="Key Ability" > Strength </specific>
+         Make an Athletics check to attempt physical activities that rely on muscular strength, including climbing, escaping from a grab, jumping, and swimming.
+         </RulesElement>
+         <RulesElement name="Heroic" type="Tier" internal-id="ID_INTERNAL_TIER_HEROIC" charelem="38" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Melee Basic Attack" type="Power" internal-id="ID_INTERNAL_POWER_MELEE_BASIC_ATTACK" charelem="39" legality="rules-legal" >
+            <specific name="Flavor" > You resort to the simple attack you learned when you first picked up a melee weapon. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Basic Attack </specific>
+            <specific name="Keywords" > Weapon </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Melee weapon </specific>
+            <specific name="Target" > One creature </specific>
+            <specific name="Attack" > Strength vs. AC </specific>
+            <specific name="Hit" > 1[W] + Strength modifier damage. </specific>
+            <specific name="	Level 21" > 2[W] + Strength modifier damage. </specific>
+         </RulesElement>
+         <RulesElement name="Ranged Basic Attack" type="Power" internal-id="ID_INTERNAL_POWER_RANGED_BASIC_ATTACK" charelem="40" legality="rules-legal" >
+            <specific name="Flavor" > You resort to the simple attack you learned when you first picked up a ranged weapon. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Basic Attack </specific>
+            <specific name="Keywords" > Weapon </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged weapon </specific>
+            <specific name="Target" > One creature </specific>
+            <specific name="Attack" > Dexterity vs. AC </specific>
+            <specific name="Hit" > 1[W] + Dexterity modifier damage. </specific>
+            <specific name="	Level 21" > 2[W] + Dexterity modifier damage. </specific>
+         </RulesElement>
+         <RulesElement name="DetailsRules" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_DETAILSRULES" charelem="41" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="female" type="Gender" internal-id="ID_INTERNAL_GENDER_FEMALE" charelem="42" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Expansion1" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION1" charelem="43" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Keepers of the Internal Sun" type="Background" internal-id="ID_FMP_BACKGROUND_667" charelem="44" legality="rules-legal" >
+            <specific name="Common Knowledge" > Nothing is more important than the acquisition and safekeeping of knowledge. If we don&apos;t understand what has come before, how can society possibly move forward? </specific>
+            <specific name="Campaign" > General </specific>
+            <specific name="Associated Skills" > History, Perception </specific>
+            <specific name="Associated Languages" > Draconic </specific>
+         </RulesElement>
+         <RulesElement name="Draconic" type="Background Association" internal-id="ID_INTERNAL_BACKGROUND_ASSOCIATION_DRACONIC" charelem="45" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="History" type="Background Association" internal-id="ID_INTERNAL_BACKGROUND_ASSOCIATION_HISTORY" charelem="46" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Perception" type="Background Association" internal-id="ID_INTERNAL_BACKGROUND_ASSOCIATION_PERCEPTION" charelem="47" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Background Benefit" type="Internal" internal-id="ID_INTERNAL_INTERNAL_BACKGROUND_BENEFIT" charelem="48" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Perception class skill" type="Background Choice" internal-id="ID_INTERNAL_BACKGROUND_CHOICE_PERCEPTION_CLASS_SKILL" charelem="49" legality="rules-legal" >
+         Add Perception to your list of class skills.
+         </RulesElement>
+         <RulesElement name="Expansion2" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION2" charelem="50" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Oracle of the Evil Eye" type="Theme" internal-id="ID_FMP_THEME_938" charelem="51" legality="rules-legal" >
+            <specific name="Creating" > Oracles usually come from races hated by the fomorians, particularly gnomes or eladrin. However, anyone who has spent time in the fomorians&apos; underground realms could have been subjected to the Baleful Ritual of the Evil Eye. The magic has even made its way into the hands of creatures outside the fomorians&apos; domain. An adventurer who became an oracle without ever leaving the natural world might have run afoul of a strange witch in the woods, or stumbled upon a bizarre cult ritual, and thus been cursed with an evil eye. </specific>
+            <specific name="Granted Powers" > ID_FMP_POWER_16022 </specific>
+            <specific name="_DisplayPowers" > ID_FMP_POWER_16022,ID_FMP_POWER_16023,ID_FMP_POWER_16024,ID_FMP_POWER_16025 </specific>
+            <specific name="_PARSED_CHILD_FEATURES" > ID_FMP_CLASS_FEATURE_4265,ID_FMP_CLASS_FEATURE_4267,ID_FMP_CLASS_FEATURE_4266 </specific>
+         Like the misshapen fomorians and their cyclops servants, an oracle of the evil eye has a deformed eye with a catlike iris. The eye grants the oracle influence over the minds of other creatures and the ability to see glimpses of the future. People fear and shun anyone with an evil eye, and often rightly so.	The Baleful Ritual of the Evil Eye causes an evil eye to appear. This ritual—known to the fomorians, some of their servants, and a scattered few hags and spellcasters—takes hours to perform and is extremely painful, involving burning oils, foul incense, and surgical incisions. Fomorians, well known for their wickedness and insanity, might order that the ritual be conducted for many reasons. A ruler might give an evil eye as a gift to a faithful servant one day, then issue one as a punishment to a prisoner the next.	Only the cruelest creatures consider gaining an evil eye to be a blessing. Evil fey such as quicklings and spriggans thrill at the power of an evil eye, and eagerly do the work of the fomorians in exchange for such a blessing.	Most oracles of the evil eye who undertake adventuring careers are gnomes or eladrin. Forced to undergo the ritual, they become outcasts from their home societies. They go off into the woods of the Feywild, never to be seen again, or they travel to the natural world to lurk on the fringes of society and use their evil eyes to get what they want. An oracle of the evil eye might be adventuring in search of a way to dispel the curse and return to the warmth and comfort of society.
+         </RulesElement>
+         <RulesElement name="Oracle of the Evil Eye Starting Feature" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_4265" charelem="52" legality="rules-legal" >
+            <specific name="Flavor" > Like each fomorian, each evil eye seethes with its own madness and base emotions. When you fight, anger boils up within it. When you see gold, the eye covets it. As time goes on, you feel your taste for fine wares and luxury grow as you become unable to distinguish between which desires are truly yours and which come from your evil eye. </specific>
+            <specific name="Short Description" > Gain the gaze of the evil eye power </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Powers" > ID_FMP_POWER_16022 </specific>
+            <specific name="Type" > At-Will </specific>
+            <specific name="Class" />
+            <specific name="_DisplayPowers" > ID_FMP_POWER_16022 </specific>
+         You gain the gaze of the evil eye power.
+         </RulesElement>
+         <RulesElement name="Gaze of the Evil Eye" type="Power" internal-id="ID_FMP_POWER_16022" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=16022" charelem="53" legality="rules-legal" >
+            <specific name="Flavor" > Your foe feels the foreboding stare of your evil eye warning it away from you. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Oracle of the Evil Eye Attack </specific>
+            <specific name="Keywords" > Arcane, Psychic </specific>
+            <specific name="Action Type" > Minor Action </specific>
+            <specific name="Attack Type" > Ranged 5 </specific>
+            <specific name="Target" > One creature you can see that isn&apos;t marked by you </specific>
+            <specific name="Effect" > The target takes 2 psychic damage whenever it hits you with an attack (a creature can take this damage only once per turn). The effect ends if you don&apos;t have line of sight to the target at the end of your turn, or if you use this power against a different target.	Level 21: 4 psychic damage. </specific>
+            <specific name="Level" />
+            <specific name="Power Type" > Attack </specific>
+            <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_4265 </specific>
+         </RulesElement>
+         <RulesElement name="Expansion3" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION3" charelem="54" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Expansion4" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION4" charelem="55" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Expansion5" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION5" charelem="56" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Deva" type="Race" internal-id="ID_FMP_RACE_35" url="http://www.wizards.com/dndinsider/compendium/race.aspx?id=35" charelem="14" legality="rules-legal" >
+            <specific name="Flavor" > Immortal spirits who embody virtue, born and reborn to mortal life in the world </specific>
+            <specific name="Size" > Medium </specific>
+            <specific name="Speed" > 6 squares </specific>
+            <specific name="Characteristics" > Dedicated, devout, elegant, enlightened, introspective, mystical, refined, righteous, spiritual, thoughtful </specific>
+            <specific name="Physical Qualities" > In appearance, devas are very similar to humans, but with an unearthly beauty and an uncanny stillness about them. They are almost as tall as dragonborn, but much more slender.Devas&apos; coloration distinguishes them most strongly from humans. All devas have patterns of light and dark colors on their skin. The light portions are chalk white or pale gray, and the dark areas range from blue or purple to dark gray or black. In any individual deva, either light or dark can be dominant, with the opposite shade appearing in simple, elegant patterns on the face, chest, and shoulders. A deva&apos;s hair is typically the same color as these skin patterns.When sitting or standing at rest, devas remain almost perfectly still, except for the occasional blink of the eyes. They don&apos;t fidget or twitch, and their eyes move only when they are actively examining something.Devas do not have children. When a deva dies, his or her spirit is reincarnated in a new, adult body that appears in some sacred place, such as a mountain peak, a riverbank, or a desert oasis. The new deva retains enough memory of past lives to speak and understand multiple languages and offer the proper prayers and sacrifices to the gods of good. </specific>
+            <specific name="Playing" > Devas are refined and polite. They follow the highest moral standards, but they are not afraid of violence. They believe that the pursuit of good is an eternal war with the forces of evil, embodied in rakshasas, demons, devils, and the evil gods and their servant angels. Devas wage that war in their hearts as well, constantly vigilant lest evil take root and corrupt their souls, transforming them into the creatures they most despise.Because they remember, at least dimly, a life in the Astral Sea spent in close company with the gods, most devas are devout worshipers of the gods of good, especially Bahamut but also Moradin and Pelor. Devas seek to achieve a personal connection with the gods rather than approach them through temples and priests. They worship at meals in their homes, setting an empty place for the absent gods, and strive through meditation and prayer to become more like the gods they serve. Deva adventurers are commonly avengers, clerics, and invokers, who savor the experience of divine power flowing through them without any intermediary.Devas do not have cities or societies of their own, and their numbers are so small that a deva can spend entire lifetimes without ever meeting another of his or her kind. They live among other races and, at least to some extent, adopt their ways. However, all devas remember elements of the life they had before their incarnation in flesh and the beginning of their cycle of rebirth, and they share some common cultural elements of dress, religion, and habits. Devas favor flowing clothes of fine silks, polished metal armor with winglike shoulder ornaments, and headdresses or helmets that suggest crowns or halos. In other ways, they prefer to live simply, without extravagance. </specific>
+            <specific name="Vision" > Normal </specific>
+            <specific name="Average Height" > 6&apos;1&quot;-6&apos;6&quot; </specific>
+            <specific name="Average Weight" > 175-280 lb. </specific>
+            <specific name="Ability Scores" > +2 Wisdom, +2 Charisma or +2 Intelligence </specific>
+            <specific name="Languages" > Common, choice of two others </specific>
+            <specific name="Skill Bonuses" > +2 History, +2 Religion </specific>
+            <specific name="Short Description" > Immortal servitors of the gods of good, devas are eternally reborn to fight evil. </specific>
+            <specific name="Male Names" > Adiah, Ansis, Ayab, Bavak, Beriah, Eben, Elyas, Galad, Gamal, Hiyal, Iannes, Kerem, Mahar, Marach, Mathas, Natan, Nehem, Oris, Raham, Ronen, Samel, Sered, Tavar, Vered, Zachar </specific>
+            <specific name="Female Names" > Abea, Adara, Asha, Chana, Danel, Darah, Davi, Elka, Eranah, Hania, Hava, Idria, Isa, Jael, Kana, Kayah, Lihi, Mahel, Marek, Navah, Noma, Paziah, Ravah, Riya, Sada, Shara, Tirah </specific>
+            <specific name="Racial Traits" > ID_FMP_RACIAL_TRAIT_1137, ID_FMP_RACIAL_TRAIT_1138, ID_FMP_RACIAL_TRAIT_1139, ID_FMP_RACIAL_TRAIT_1140 </specific>
+         Deep in the recesses of memory, devas recall what they once were: immortal servitors of the gods of good, spirits who chose to bind themselves to the world in mortal flesh. For millennia, their souls have been reborn to wage an endless war against the forces of darkness. Most devas are fiercely committed to the cause of good, because they fear what they might become if they turn to evil: A deva whose soul becomes corrupted risks being reborn as a rakshasa.
+
+Play a Deva if you want ...
+• 	to have dimly remembered connections to a thousand heroic lifetimes.•	to embrace the cause of good and strive for perfection in all you do.• 	to be a member of a race that favors the avenger, cleric, invoker, and wizard classes.
+         </RulesElement>
+         <RulesElement name="Deva" type="Grants" internal-id="ID_INTERNAL_GRANTS_DEVA" charelem="57" legality="rules-legal" >
+            <specific name="_SupportsID" > ID_FMP_RACE_35 </specific>
+         </RulesElement>
+         <RulesElement name="Medium" type="Size" internal-id="ID_INTERNAL_SIZE_MEDIUM" charelem="58" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Normal" type="Vision" internal-id="ID_INTERNAL_VISION_NORMAL" charelem="59" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Astral Majesty" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1137" charelem="4" legality="rules-legal" >
+            <specific name="Short Description" > +1 bonus to all defenses against bloodied creatures </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Class" > ID_FMP_RACE_35 </specific>
+         You have a +1 bonus to all defenses against attacks made by bloodied creatures.
+         </RulesElement>
+         <RulesElement name="Astral Resistance" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1138" charelem="15" legality="rules-legal" >
+            <specific name="Short Description" > Resist necrotic and resist radiant equal to 5 + one-half your level </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Class" > ID_FMP_RACE_35 </specific>
+         You have resistance to necrotic damage and radiant damage equal to 5 + one-half your level.
+         </RulesElement>
+         <RulesElement name="Immortal Origin" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1139" charelem="60" legality="rules-legal" >
+            <specific name="Short Description" > Immortal creature origin </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Class" > ID_FMP_RACE_49 </specific>
+         Your spirit is native to the Astral Sea, so you are considered an immortal creature for the purpose of effects that relate to creature origin.
+         </RulesElement>
+         <RulesElement name="Memory of a Thousand Lifetimes" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1140" charelem="61" legality="rules-legal" >
+            <specific name="Short Description" > Have the memory of a thousand lifetimes power </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Powers" > ID_FMP_POWER_6186 </specific>
+            <specific name="Type" > Encounter </specific>
+            <specific name="Class" > ID_FMP_RACE_35 </specific>
+            <specific name="_DisplayPowers" > ID_FMP_POWER_6186 </specific>
+         You have the memory of a thousand lifetimes power.
+         </RulesElement>
+         <RulesElement name="Memory of a Thousand Lifetimes" type="Power" internal-id="ID_FMP_POWER_6186" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=6186" charelem="62" legality="rules-legal" >
+            <specific name="Flavor" > The dreamlike memories of your previous lives lend insight to aid you. </specific>
+            <specific name="Power Usage" > Encounter </specific>
+            <specific name="Display" > Deva Racial Power </specific>
+            <specific name="Keywords" />
+            <specific name="Action Type" > No Action </specific>
+            <specific name="Attack Type" > Personal </specific>
+            <specific name="Trigger" > You make an attack roll, a saving throw, a skill check, or an ability check and dislike the result </specific>
+            <specific name="Effect" > You add 1d6 to the triggering roll. </specific>
+            <specific name="_ParentFeature" > ID_FMP_RACIAL_TRAIT_1140 </specific>
+            <specific name="Class" > ID_FMP_RACE_35 </specific>
+         </RulesElement>
+         <RulesElement name="Wisdom" type="Race Ability Bonus" internal-id="ID_INTERNAL_RACE_ABILITY_BONUS_WISDOM" charelem="2" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Common" type="Language" internal-id="ID_FMP_LANGUAGE_1" charelem="16" legality="rules-legal" >
+         Common is a debased form of Supernal, in the way that humans and halflings heard the first language.
+         </RulesElement>
+         <RulesElement name="History Bonus" type="Racial Trait" internal-id="ID_INTERNAL_RACIAL_TRAIT_HISTORY_BONUS" charelem="9" legality="rules-legal" >
+            <specific name="_CS_ShortDescription" > @ </specific>
+         Gain a +2 racial bonus to History.
+         </RulesElement>
+         <RulesElement name="Religion Bonus" type="Racial Trait" internal-id="ID_INTERNAL_RACIAL_TRAIT_RELIGION_BONUS" charelem="13" legality="rules-legal" >
+            <specific name="_CS_ShortDescription" > @ </specific>
+         Gain a +2 racial bonus to Religion.
+         </RulesElement>
+         <RulesElement name="Intelligence" type="Race Ability Bonus" internal-id="ID_INTERNAL_RACE_ABILITY_BONUS_INTELLIGENCE" charelem="1" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Elven" type="Language" internal-id="ID_FMP_LANGUAGE_4" charelem="17" legality="rules-legal" >
+         Elven is a debased form of Supernal, in the way that elves heard the first language.
+         </RulesElement>
+         <RulesElement name="Dwarven" type="Language" internal-id="ID_FMP_LANGUAGE_3" charelem="18" legality="rules-legal" >
+         Dwarven is a debased form of Supernal, in the way that dwarves heard the first language.
+         </RulesElement>
+         <RulesElement name="Invoker" type="Class" internal-id="ID_FMP_CLASS_127" url="http://www.wizards.com/dndinsider/compendium/class.aspx?id=127" charelem="6" legality="rules-legal" >
+            <specific name="Flavor" > &quot;The only thing stronger than my faith is the fire I use to burn away those who stand against the will of the gods.&quot; </specific>
+            <specific name="Key Abilities" > Wisdom, Constitution, Intelligence </specific>
+            <specific name="Implements" > Rods, staffs </specific>
+            <specific name="Armor Proficiencies" > Cloth, leather, hide, chainmail </specific>
+            <specific name="Weapon Proficiencies" > Simple melee, simple ranged </specific>
+            <specific name="Bonus to Defense" > +1 Fortitude, +1 Reflex, +1 Will </specific>
+            <specific name="Hit Points at 1st Level" > 10+ Constitution Score </specific>
+            <specific name="Hit Points per Level Gained" > 4 </specific>
+            <specific name="Healing Surges" > 6+ Constitution Modifier </specific>
+            <specific name="Trained Skills" > Religion. From the class skills list below, choose 3 more trained skills at 1st level. </specific>
+            <specific name="Class Skills" > Arcana (Int), Diplomacy (Cha), Endurance (Con), History (Int), Insight (Wis), Intimidate (Cha), Religion (Int) </specific>
+            <specific name="Build Options" > Malediction Invoker, Preserving Invoker, Wrathful Invoker </specific>
+            <specific name="_PARSED_CLASS_FEATURE" > Channel Divinity, Divine Covenant, Ritual Casting </specific>
+            <specific name="Role" > Controller. You invoke the power of a god to blast your foes from a distance, leave them unable to defend themselves, and scatter them to the four winds. Depending on your choice of class features and powers, you lean toward either leader or striker as a secondary role. </specific>
+            <specific name="Power Source" > Divine. You practice an ancient form of divine magic, wielding the power that the gods themselves used in their battle against the primordials. </specific>
+            <specific name="Creating" > Invokers rely on Wisdom -- as an expression of their link to the divine will -- for the accuracy and potency of their attacks. Each invoker enters into a covenant with a god, a sworn pact in which the invoker agrees to fulfill certain duties in exchange for the divine power he or she will use to carry out those duties. The two most common covenants -- the Covenant of Preservation and the Covenant of Wrath -- lend themselves to two common invoker builds. Even though you must choose a covenant, you can choose any powers you like to help you fulfill it. </specific>
+            <specific name="Class Features" > Invokers have the following class features. </specific>
+            <specific name="Supplemental" > INVOKERS AND RITUALSYou own a ritual book, and it contains two rituals of your choice that you have mastered: Hand of Fate and one 1st-level ritual.Once per day, you can use Hand of Fate without expending components.INVOKERS AND DEITIESChoice of Deity: Like other divine characters, invokers are dedicated servants of one or more deities. Most invokers devote themselves to a single deity, but all invokers recognize the entire pantheon as worthy of respect (see &quot;Deities,&quot; Player&apos;s Handbook, page 20). Whereas a cleric might revere Corellon and despise Lolth as a rival and enemy, an invoker dedicated to Corellon recognizes Lolth and her servants as comrades in arms against the forces that seek to destroy the world and the gods. That&apos;s not to say that you can&apos;t oppose the evil schemes of Lolth&apos;s followers if you&apos;re dedicated to Corellon, only that you shouldn&apos;t lose sight of the grander scheme of things.Choice of Alignment: Invokers don&apos;t gain their power through rites of investiture or ordination, as avengers, clerics, and paladins do. You bear the touch of your god&apos;s own hand on your soul, a direct channel through which divine power can flow into the world, shaped by your will. Because you strive to bring your will into perfect accordance with your deity&apos;s, your alignment must match your deity&apos;s. For instance, an invoker of Moradin must be lawful good, an invoker of Pelor must be good, and an invoker of Ioun must be unaligned. </specific>
+            <specific name="Implement" > Invokers do not make use of holy symbols, since they believe that their magic predates and transcends such representations of divine power. Instead, invokers make use of rods and staffs as representations of the gods&apos; dominion over the world. When you wield a magic rod or a magic staff, you can add its enhancement bonus to the attack rolls and the damage rolls of invoker powers and invoker paragon path powers that have the implement keyword. Without an implement, you can still use these powers. </specific>
+            <specific name="Powers" > Your invoker powers are called prayers, but they are not as much supplications to the gods as direct manifestations of divine power. </specific>
+            <specific name="Power Name" > Prayers </specific>
+            <specific name="_RoleElement" > ID_FMP_ROLE_1 </specific>
+            <specific name="_PowerSourceElement" > ID_FMP_POWER_SOURCE_3 </specific>
+            <specific name="Short Description" > Imbued with divine power, you speak the words of creation to shape the world to your will. </specific>
+         At the dawn of time, the gods who inhabited the Astral Sea warred with the primordials of the Elemental Chaos, the mighty beings who shaped the world out of formless void. The greatest of the gods&apos; mortal agents in that war were invokers, imbued with a fragment of the gods&apos; own might to fight alongside them. No other mortal servant of the gods can claim the same kind of power. Through rites of investiture, avengers, clerics, and paladins gain the ability to manifest echoes of that power, uttering careful prayers and channeling divine energy through their holy symbols. You, however, channel your god&apos;s power directly. No mere symbol can contain it, for you speak the words of creation, shaping the universe to your and your god&apos;s will.Perhaps you were trained in a secret monastery, or you studied in a library where the universe&apos;s oldest lore was preserved. Or perhaps you experienced the presence of your god firsthand and took a shard of divine power into yourself. You might even be an immortal born into flesh, slowly awakening to the awesome divine power that is your birthright. Whatever your past, you are among the gods&apos; most trusted servants, bound to a covenant in which you swore to use divine power with great care. To what end will you wield that might?
+         </RulesElement>
+         <RulesElement name="Invoker" type="Grants" internal-id="ID_INTERNAL_GRANTS_INVOKER" charelem="63" legality="rules-legal" >
+            <specific name="_SupportsID" > ID_FMP_CLASS_127 </specific>
+         </RulesElement>
+         <RulesElement name="Controller" type="Role" internal-id="ID_FMP_ROLE_1" charelem="64" legality="rules-legal" >
+         Controllers deal with large numbers of enemies at the same time. They favor offense over defense, using powers that deal damage to multiple foes at once, as well as subtler powers that weaken, confuse, or delay their foes.
+         </RulesElement>
+         <RulesElement name="Divine" type="Power Source" internal-id="ID_FMP_POWER_SOURCE_3" charelem="65" legality="rules-legal" >
+         Divine magic comes from the gods. The gods grant power to their devotees, which clerics and paladins, for example, access through prayers and litanies. Divine magic excels at healing, protection, and smiting the enemies of the gods. Divine powers are called prayers.
+         </RulesElement>
+         <RulesElement name="Armor Proficiency (Cloth)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(CLOTH)" charelem="66" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Armor Proficiency (Leather)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(LEATHER)" charelem="67" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Armor Proficiency (Hide)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(HIDE)" charelem="68" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Armor Proficiency (Chainmail)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(CHAINMAIL)" charelem="69" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Simple Melee" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_SIMPLE_MELEE" charelem="70" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Club)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CLUB)" charelem="71" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Dagger)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(DAGGER)" charelem="72" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Javelin)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(JAVELIN)" charelem="73" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Mace)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(MACE)" charelem="74" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Sickle)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SICKLE)" charelem="75" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Spear)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SPEAR)" charelem="76" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Greatclub)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(GREATCLUB)" charelem="77" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Morningstar)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(MORNINGSTAR)" charelem="78" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Quarterstaff)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(QUARTERSTAFF)" charelem="79" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Scythe)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SCYTHE)" charelem="80" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Spiked gauntlet)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SPIKED_GAUNTLET)" charelem="81" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Talid)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(TALID)" charelem="82" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Widow&apos;s knife)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(WIDOW&apos;S_KNIFE)" charelem="83" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Wrist razors)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(WRIST_RAZORS)" charelem="84" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Light mace)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(LIGHT_MACE)" charelem="85" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Short spear)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SHORT_SPEAR)" charelem="86" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Claw Fighter Claw)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CLAW_FIGHTER_CLAW)" charelem="87" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Shadowblade)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SHADOWBLADE)" charelem="88" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Climbing Claw)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CLIMBING_CLAW)" charelem="89" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Dragontooth Shield (Heroic Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(DRAGONTOOTH_SHIELD_(HEROIC_TIER))" charelem="90" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Fighting Shield (Heroic Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(FIGHTING_SHIELD_(HEROIC_TIER))" charelem="91" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Soul Shield (Paragon Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SOUL_SHIELD_(PARAGON_TIER))" charelem="92" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Sun Shield (Paragon Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SUN_SHIELD_(PARAGON_TIER))" charelem="93" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Rod of Seven Parts (Weapon))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(ROD_OF_SEVEN_PARTS_(WEAPON))" charelem="94" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Simple Ranged" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_SIMPLE_RANGED" charelem="95" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Hand crossbow)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(HAND_CROSSBOW)" charelem="96" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Sling)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SLING)" charelem="97" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Crossbow)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CROSSBOW)" charelem="98" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Repeating crossbow)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(REPEATING_CROSSBOW)" charelem="99" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Weapon Proficiency (Dejada)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(DEJADA)" charelem="100" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Channel Divinity" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_324" charelem="101" legality="rules-legal" >
+            <specific name="Flavor" > Once per encounter you can invoke divine power, filling yourself with the might of your patron deity. With the divine might you invoke, you can wield special powers such as divine fortune and turn undead. Some clerics learn other uses for this ability by choosing feats that grant additional channel divinity powers. </specific>
+            <specific name="Short Description" > Invoke a channel divinity class feature or other power; encounter. </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Powers" > ID_FMP_POWER_1589,ID_FMP_POWER_146,ID_FMP_POWER_1746,ID_FMP_POWER_1747,ID_FMP_POWER_5330,ID_FMP_POWER_5981,ID_FMP_POWER_5186,ID_FMP_POWER_7885,ID_FMP_POWER_5331 </specific>
+            <specific name="Type" > Encounter </specific>
+            <specific name="Class" > ID_FMP_CLASS_129 </specific>
+            <specific name="_DisplayPowers" > ID_FMP_POWER_1746,ID_FMP_POWER_1747,ID_FMP_POWER_5330,ID_FMP_POWER_5331,ID_FMP_POWER_5186 </specific>
+         Once per encounter you can invoke divine power, filling yourself with the might of your patron deity. With the divine might you invoke you can wield special powers. You can also learn other uses for this feature; for instance, the divinity feats grant characters with access to the Channel Divinity class feature the ability to use additional special powers.	Regardless of how many different uses for Channel Divinity you know, you can use only one such ability per encounter. The special ability or power you invoke works just like your other powers.
+         </RulesElement>
+         <RulesElement name="Divine Covenant" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_1156" charelem="102" legality="rules-legal" >
+            <specific name="Short Description" > Choose a Divine Covenant option </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="_PARSED_SUB_FEATURES" > ID_FMP_CLASS_FEATURE_1265, ID_FMP_CLASS_FEATURE_1266, ID_FMP_CLASS_FEATURE_1717 </specific>
+         Invokers wield ancient divine power that is not accessible to most mortals -- only to those who enter into a personal covenant with a god. Invokers undergo long years of study and testing. Only after that time are they allowed to enter into the final covenant that grants them access to this class&apos;s powers. Some say that, in the final swearing of the covenant, the invoker&apos;s god briefly manifests, but the details of an invoker&apos;s initiation are a closely held secret.Choose one of the options described below. The Divine Covenant you choose provides you with a Channel Divinity power and a covenant manifestation that takes effect whenever you use a divine encounter or daily attack power. Your choice also provides bonuses to certain invoker powers, as detailed in those powers.
+         </RulesElement>
+         <RulesElement name="Covenant of Malediction" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_1717" charelem="103" legality="rules-legal" >
+            <specific name="Level" > 1 </specific>
+            <specific name="Powers" > ID_FMP_POWER_7150 </specific>
+            <specific name="Type" > Encounter </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="_DisplayPowers" > ID_FMP_POWER_7150 </specific>
+         The gods entrust you with the invocations of destruction used in their war against the primordials, so you can carry forward their sacred cause and ensure that the world&apos;s enemies never rise again.Channel Divinity: You gain the Channel Divinity power maledictor&apos;s doom.Covenant Manifestation: When you use a divine encounter or daily attack power on your turn, you can push one target hit by the power 1 square after the power&apos;s effect is resolved.
+         </RulesElement>
+         <RulesElement name="Maledictor&apos;s Doom" type="Power" internal-id="ID_FMP_POWER_7150" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=7150" charelem="104" legality="rules-legal" >
+            <specific name="Flavor" > Foes who hear your solemn vow are shaken by its weighty promise. </specific>
+            <specific name="Power Usage" > Encounter </specific>
+            <specific name="Display" > Invoker Feature </specific>
+            <specific name="Keywords" > Divine, Fear </specific>
+            <specific name="Action Type" > Minor Action </specific>
+            <specific name="Attack Type" > Close blast 5 </specific>
+            <specific name="Channel Divinity" > You can use only one channel divinity power per encounter </specific>
+            <specific name="Target" > Each enemy in the blast </specific>
+            <specific name="Effect" > Each target takes a -1 penalty to attack rolls and saving throws until the end of your next turn. In addition, whenever the target is hit by a fear attack before the end of your next turn, you push the target 1 square as a free action. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" />
+            <specific name="Power Type" > Feature </specific>
+            <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_1717 </specific>
+         </RulesElement>
+         <RulesElement name="Ritual Casting" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_683" charelem="105" legality="rules-legal" >
+            <specific name="Flavor" > As you gain levels, you automatically gain access to new rituals, but you can also buy new rituals or acquire them during your adventures. Higher-level rituals let you seal or open doors, view places or people from a distance, or open portals to other places. </specific>
+            <specific name="Short Description" > Gain Ritual Caster as a bonus feat.	In addition, you possess a ritual book, and it contains two 1st-level rituals of your choice that you have mastered. </specific>
+            <specific name="Level" > 1 </specific>
+         You gain the Ritual Caster feat as a bonus feat, allowing you to use magical rituals.
+         </RulesElement>
+         <RulesElement name="Alchemist" type="Feat" internal-id="ID_FMP_FEAT_652" url="http://www.wizards.com/dndinsider/compendium/feat.aspx?id=652" charelem="106" legality="rules-legal" >
+            <specific name="Flavor" > Through study and experimentation, you have unlocked alchemical secrets and are now equipped to delve into more. </specific>
+            <specific name="Short Description" > Create alchemical items; can replace Ritual Caster class feature </specific>
+            <specific name="Special" > If you receive the Ritual Caster feat as a class feature, you can take the Alchemist feat instead. </specific>
+            <specific name="Tier" > Heroic </specific>
+         You can make alchemical items of your level or lower. You must have the correct formula and training in an appropriate skill.
+         </RulesElement>
+         <RulesElement name="Alchemical Items" type="Internal" internal-id="ID_INTERNAL_INTERNAL_ALCHEMICAL_ITEMS" charelem="107" legality="rules-legal" >
+         You can make alchemical items.
+         </RulesElement>
+         <RulesElement name="Religion" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_RELIGION" charelem="12" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Invoker Implements" type="Grants" internal-id="ID_INTERNAL_GRANTS_INVOKER_IMPLEMENTS" charelem="108" legality="rules-legal" >
+            <specific name="_SupportsID" > ID_FMP_CLASS_127 </specific>
+         </RulesElement>
+         <RulesElement name="Implement Proficiency (Rod)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_IMPLEMENT_PROFICIENCY_(ROD)" charelem="109" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Implement Proficiency (Staff)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_IMPLEMENT_PROFICIENCY_(STAFF)" charelem="110" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Ritual Book" type="Gear" internal-id="ID_FMP_GEAR_31" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=31&amp;ftype=4" charelem="111" legality="rules-legal" >
+            <specific name="Full Text" > Ritual BookCategory: GearPrice: 50 gp Weight: 3 lbDescription: Ritual casters use a ritual book to store the rituals they have mastered. </specific>
+            <specific name="Weight" > 3 </specific>
+            <specific name="Gold" > 50 </specific>
+            <specific name="Category" > Gear </specific>
+            <specific name="count" > 1 </specific>
+         Ritual casters use a ritual book to store the rituals they have mastered.
+         </RulesElement>
+         <RulesElement name="Hand of Fate" type="Ritual" internal-id="ID_FMP_RITUAL_16" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=16" charelem="112" legality="rules-legal" >
+            <specific name="Flavor" > A ghostly apparition appears to give you basic guidance about a course of action. </specific>
+            <specific name="Category" > Divination </specific>
+            <specific name="Key Skill" > Religion (no check) </specific>
+            <specific name="Component Cost" > 70 gp </specific>
+            <specific name="Duration" > 10 minutes </specific>
+            <specific name="Level" > 4 </specific>
+            <specific name="Time" > 10 minutes </specific>
+            <specific name="Market Price" > 175 gp </specific>
+            <specific name="Type" > Ritual </specific>
+         When you perform the ritual, ask up to three questions about possible courses of action. A translucent blue hand appears and indicates with a gesture what the most rewarding course of action is.	If you describe courses of action that refer to directions or specific objects, then the hand points toward the choice that bears the greatest reward. If you ask the hand, “Should we head down the stairs or through the doors?” then the hand responds by pointing either to the stairs or the doors. If you ask the hand, “Which of these three levers should we pull first?” then the hand responds by pointing to a lever.	If you describe only a single course of action, the ritual assumes that inaction is your other option. The hand either beckons you (to indicate that you should proceed) or gestures for you to halt. For example, the question “Should we explore the ruins of Solitronia?” results in the hand either beckoning you or gesturing for you to halt.	The hand can&apos;t assess events in the far future; its judgment extends only to likely events in the next hour. If the hand can&apos;t indicate a preference, the ritual has no effect and expends no components.	There are two drawbacks to using the ritual to aid your decisions. First, fate values rewards over risk, and this ritual provides guidance accordingly. It points you toward a high risk, high reward option before pointing you toward a low risk, low reward alternative. For example, if one tunnel leads to a dragon and great wealth and the other tunnel leads back to town, then the hand points toward the dragon. However, a high risk, low reward alternative is considered less rewarding than a low risk, low reward option.	Second, the hand can choose only the most rewarding course of action relative to the alternatives provided. That doesn&apos;t mean that the indicated choice is necessarily a good idea, only that it&apos;s a better idea than the other options you&apos;ve indicated. In the example above, if all three levers activate traps, then the hand points toward the lever that triggers a trap less lethal than the others.
+         </RulesElement>
+         <RulesElement name="Hand of Radiance" type="Power" internal-id="ID_FMP_POWER_7151" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=7151" charelem="113" legality="rules-legal" >
+            <specific name="Flavor" > Tendrils of radiance streak from your fingertips across the battlefield. The beams strike your enemies, raining sparks of light on impact. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Radiant </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged 10 </specific>
+            <specific name="Target" > One, two, or three creaturesLevel 21: Target an additional creature. </specific>
+            <specific name="Attack" > Wisdom vs. Reflex </specific>
+            <specific name="Hit" > 1d4 + Wisdom modifier radiant damage. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+            <specific name="_Associated Feats" > ID_FMP_FEAT_1486, ID_FMP_FEAT_1453 </specific>
+         </RulesElement>
+         <RulesElement name="Sun Strike" type="Power" internal-id="ID_FMP_POWER_5137" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=5137" charelem="114" legality="rules-legal" >
+            <specific name="Flavor" > A beam of radiant energy extends from your hands to bathe a foe in searing light and force it to move. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Radiant </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged 10 </specific>
+            <specific name="Target" > One creature </specific>
+            <specific name="Attack" > Wisdom vs. Reflex </specific>
+            <specific name="Hit" > 1d8 + Wisdom modifier radiant damage, and you slide the target 1 square.Level 21: 2d8 + Wisdom modifier radiant damage. </specific>
+            <specific name="Special" > You can use this power as a ranged basic attack. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+            <specific name="_Associated Feats" > ID_FMP_FEAT_1484, ID_FMP_FEAT_1447, ID_FMP_FEAT_1467, ID_FMP_FEAT_1469 </specific>
+            <specific name="_BasicAttack" > Ranged </specific>
+         </RulesElement>
+         <RulesElement name="Insight" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_INSIGHT" charelem="10" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Perception" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_PERCEPTION" charelem="11" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="History" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_HISTORY" charelem="8" legality="rules-legal" >
+         </RulesElement>
+         <RulesElement name="Banish Vermin" type="Ritual" internal-id="ID_FMP_RITUAL_101" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=101" charelem="115" legality="rules-legal" >
+            <specific name="Flavor" > Minor preparation is all it takes to ward against pests. </specific>
+            <specific name="Category" > Warding </specific>
+            <specific name="Key Skill" > Nature </specific>
+            <specific name="Component Cost" > 10 gp </specific>
+            <specific name="Duration" > Special </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Time" > 10 minutes </specific>
+            <specific name="Market Price" > 30 gp </specific>
+            <specific name="Type" > Ritual </specific>
+         You ward a single zone, up to burst 5, to be unpleasant to all kinds of unwanted rodents and insects of size Tiny or smaller, even if they are part of a swarm. Any vermin that are in the burst must leave by the most expedient means possible, and none enter the affected area for a period determined by your Nature check result.&lt;table&gt;Check Result	Duration9 or lower	3 days10–19	1 week20–29	2 weeks30 or higher	1 month&lt;/table&gt;
+         </RulesElement>
+         <RulesElement name="Staff Expertise" type="Feat" internal-id="ID_FMP_FEAT_3151" url="http://www.wizards.com/dndinsider/compendium/feat.aspx?id=3151" charelem="19" legality="rules-legal" >
+            <specific name="Flavor" > The staff is the most durable implement as well as a dependable weapon. You have learned to use the staff to defend yourself while unleashing your magical powers or to strike at enemies beyond your reach. </specific>
+            <specific name="Short Description" > While using a staff as a weapon or implement: +1/2/3 to attack rolls, ranged attacks don&apos;t provoke opportunity attacks, +1 reach </specific>
+            <specific name="_Tags" > Essentials </specific>
+            <specific name="Tier" > Heroic </specific>
+         You gain a +1 feat bonus to the attack rolls of implement powers and weapon powers that you use with a staff. This bonus increases to +2 at 11th level and +3 at 21st level.	In addition, when you make a ranged or an area attack with a staff as an implement, you don&apos;t provoke opportunity attacks for doing so.	When you make a melee weapon attack with a staff, the weapon&apos;s reach for that attack increases by 1.
+         </RulesElement>
+         <RulesElement name="Thunder of Judgment" type="Power" internal-id="ID_FMP_POWER_2853" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=2853" charelem="116" legality="rules-legal" >
+            <specific name="Flavor" > Blasts of thunder rock the air around your foes each time you strike your staff on the ground, leaving them battered and senseless. </specific>
+            <specific name="Power Usage" > Encounter </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Thunder </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged 10 </specific>
+            <specific name="Target" > One, two, or three creatures </specific>
+            <specific name="Attack" > Wisdom vs. Fortitude </specific>
+            <specific name="Hit" > 1d6 + Wisdom modifier thunder damage, or 2d6 + Wisdom modifier thunder damage if you target only one creature. In addition, the target is dazed until the end of your next turn. </specific>
+            <specific name="	Covenant of Wrath" > You also push the target a number of squares equal to your Constitution modifier. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+         </RulesElement>
+         <RulesElement name="Silent Malediction" type="Power" internal-id="ID_FMP_POWER_7161" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=7161" charelem="117" legality="rules-legal" >
+            <specific name="Flavor" > You enter a trance as your lips move. Your enemies don&apos;t hear what you&apos;re saying because of the thunder rumbling around them. </specific>
+            <specific name="Power Usage" > Daily </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Thunder </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Close blast 3 </specific>
+            <specific name="Target" > Each creature in the blast </specific>
+            <specific name="Attack" > Wisdom vs. Fortitude </specific>
+            <specific name="Hit" > 2d6 + Wisdom modifier thunder damage, and the target is stunned (save ends). </specific>
+            <specific name="Miss" > Half damage, and the target is dazed until the end of your next turn. </specific>
+            <specific name="Effect" > You are dazed until the end of your next turn. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+         </RulesElement>
+         <RulesElement name="Pelor" type="Deity" internal-id="ID_FMP_DEITY_9" charelem="118" legality="rules-legal" >
+            <specific name="Alignment" > Good </specific>
+            <specific name="Domains" > ID_FMP_DOMAIN_11, ID_FMP_DOMAIN_14, ID_FMP_DOMAIN_26 </specific>
+            <specific name="_Tags" > Essentials </specific>
+         God of the sun and summer, Pelor is the keeper of time. He supports those in need and opposes all that is evil. As the lord of agriculture and the bountiful harvest, he is the deity most commonly worshiped by ordinary humans, and his priests are well received wherever they go. Paladins and rangers are found among his worshipers. He directs his followers thus:* Alleviate suffering wherever you find it.* Bring Pelor&apos;s light into places of darkness, showing kindness, mercy, and compassion.* Be watchful against evil.
+         </RulesElement>
+         <RulesElement name="Hope" type="Domain" internal-id="ID_FMP_DOMAIN_11" charelem="119" legality="rules-legal" >
+         The hope domain doesn&apos;t exist for those who merely wish for something to come to pass; it stands for those who express an optimistic faith in the future. As such, Bahamut and Pelor share reign over the domain.Pelor shines the light of hope into all hearts that accept his benevolent message. His followers express hope not just for a kinder future but for good harvests from their just labors. Pelor&apos;s hope is the faith that the sun will rise, that winter will end, and that compassion will flourish.Bahamut claims hope among his domains in a different form. The Platinum Dragon&apos;s followers rely on the ideals of justice and honor as shields against the darkness that can claim souls. Their hope is that righteous action can prevent a drastic fall. Bahamut places faith not in the external world, but in the spirit of the individual.
+         </RulesElement>
+         <RulesElement name="Life" type="Domain" internal-id="ID_FMP_DOMAIN_14" charelem="120" legality="rules-legal" >
+         All but a few deities have an interest in life as a domain, but only two place it among their primary concerns.Melora stands as the world&apos;s advocate. If it originates in the world, and it breathes and draws sustenance, she champions its right to exist. Yet Melora does not value one of the world&apos;s living things over another. All have the right to play out the natural processes of struggle and survival. Melora does not control the world&apos;s primal spirits, but she recognizes their importance and has allied with the elder spirits many times. Primal peoples who would never consider worshiping another deity sometimes acknowledge Melora as a respected ally of the primal spirits.Pelor brings focus to the cause of life in two different ways. He watches over the life of the fields and farms, and the harvests and herds. As his priests are wont to say, good food is sustenance for the soul. He cares also for the lives of good people and blesses those who show mercy and alleviate suffering. Other deities of the life domain likely color their interpretation of the domain with their other concerns. There might even be a chaotic evil deity of destruction and the wilderness who promotes the life of ravenous beasts.
+         </RulesElement>
+         <RulesElement name="Sun" type="Domain" internal-id="ID_FMP_DOMAIN_26" charelem="121" legality="rules-legal" >
+         The sun&apos;s influence and brilliance are obvious to all, acting as a daily reminder of Pelor&apos;s power and beneficence. The sun is the light of growth and renewal. It is warmth in winter and ensures good harvest come the fall. Pelor extends its light to all just as he hopes his followers extend their compassion to all. The sun also peels back the veil of night, and Pelor&apos;s followers see in that a metaphor for the light they must bring to shadowy deeds and dark hearts.Sun gods frequently rule pantheons or stand as the first among equals. Although usually portrayed as benevolent or dispassionate deities, sun gods don&apos;t need to be good or unaligned. An evil sun god might be a bloodthirsty tyrant who threatens drought and fire unless slaked by sacrifices.
+         </RulesElement>
+         <RulesElement name="Rebuke Undead" type="Power" internal-id="ID_FMP_POWER_5186" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=5186" charelem="122" legality="rules-legal" >
+            <specific name="Flavor" > Undead flee and then cower in your presence, their bodies seared by divine light. </specific>
+            <specific name="Power Usage" > Encounter (Special) </specific>
+            <specific name="Display" > Invoker Feature </specific>
+            <specific name="Keywords" > Divine, Implement, Radiant </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Close blast 5 </specific>
+            <specific name="Channel Divinity" > You can use only one channel divinity power per encounter. </specific>
+            <specific name="Target" > Each undead creature in the blast </specific>
+            <specific name="Attack" > Wisdom vs. Will </specific>
+            <specific name="Hit" > 1d10 + Wisdom modifier radiant damage. You push the target 2 squares, and it is dazed until the end of your next turn.Level 5: 2d10 + Wisdom modifier radiant damage.Level 11: 3d10 + Wisdom modifier radiant damage.Level 15: 4d10 + Wisdom modifier radiant damage.Level 21: 5d10 + Wisdom modifier radiant damage.Level 25: 6d10 + Wisdom modifier radiant damage. </specific>
+            <specific name="Miss" > Half damage. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" />
+            <specific name="Power Type" > Feature </specific>
+            <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_324 </specific>
+         </RulesElement>
+      </RulesElementTally>
+
+
+      <!--
+         The tally of the character&apos;s loot
+      -->
+      <LootTally>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Ritual Book" type="Gear" internal-id="ID_FMP_GEAR_31" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=31&amp;ftype=4" charelem="123" legality="rules-legal" >
+               <specific name="Full Text" > Ritual BookCategory: GearPrice: 50 gp Weight: 3 lbDescription: Ritual casters use a ritual book to store the rituals they have mastered. </specific>
+               <specific name="Weight" > 3 </specific>
+               <specific name="Gold" > 50 </specific>
+               <specific name="Category" > Gear </specific>
+               <specific name="count" > 1 </specific>
+            Ritual casters use a ritual book to store the rituals they have mastered.
+            </RulesElement>
+         </loot>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Hand of Fate" type="Ritual" internal-id="ID_FMP_RITUAL_16" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=16" charelem="124" legality="rules-legal" >
+               <specific name="Flavor" > A ghostly apparition appears to give you basic guidance about a course of action. </specific>
+               <specific name="Category" > Divination </specific>
+               <specific name="Key Skill" > Religion (no check) </specific>
+               <specific name="Component Cost" > 70 gp </specific>
+               <specific name="Duration" > 10 minutes </specific>
+               <specific name="Level" > 4 </specific>
+               <specific name="Time" > 10 minutes </specific>
+               <specific name="Market Price" > 175 gp </specific>
+               <specific name="Type" > Ritual </specific>
+            When you perform the ritual, ask up to three questions about possible courses of action. A translucent blue hand appears and indicates with a gesture what the most rewarding course of action is.	If you describe courses of action that refer to directions or specific objects, then the hand points toward the choice that bears the greatest reward. If you ask the hand, “Should we head down the stairs or through the doors?” then the hand responds by pointing either to the stairs or the doors. If you ask the hand, “Which of these three levers should we pull first?” then the hand responds by pointing to a lever.	If you describe only a single course of action, the ritual assumes that inaction is your other option. The hand either beckons you (to indicate that you should proceed) or gestures for you to halt. For example, the question “Should we explore the ruins of Solitronia?” results in the hand either beckoning you or gesturing for you to halt.	The hand can&apos;t assess events in the far future; its judgment extends only to likely events in the next hour. If the hand can&apos;t indicate a preference, the ritual has no effect and expends no components.	There are two drawbacks to using the ritual to aid your decisions. First, fate values rewards over risk, and this ritual provides guidance accordingly. It points you toward a high risk, high reward option before pointing you toward a low risk, low reward alternative. For example, if one tunnel leads to a dragon and great wealth and the other tunnel leads back to town, then the hand points toward the dragon. However, a high risk, low reward alternative is considered less rewarding than a low risk, low reward option.	Second, the hand can choose only the most rewarding course of action relative to the alternatives provided. That doesn&apos;t mean that the indicated choice is necessarily a good idea, only that it&apos;s a better idea than the other options you&apos;ve indicated. In the example above, if all three levers activate traps, then the hand points toward the lever that triggers a trap less lethal than the others.
+            </RulesElement>
+         </loot>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Banish Vermin" type="Ritual" internal-id="ID_FMP_RITUAL_101" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=101" charelem="125" legality="rules-legal" >
+               <specific name="Flavor" > Minor preparation is all it takes to ward against pests. </specific>
+               <specific name="Category" > Warding </specific>
+               <specific name="Key Skill" > Nature </specific>
+               <specific name="Component Cost" > 10 gp </specific>
+               <specific name="Duration" > Special </specific>
+               <specific name="Level" > 1 </specific>
+               <specific name="Time" > 10 minutes </specific>
+               <specific name="Market Price" > 30 gp </specific>
+               <specific name="Type" > Ritual </specific>
+            You ward a single zone, up to burst 5, to be unpleasant to all kinds of unwanted rodents and insects of size Tiny or smaller, even if they are part of a swarm. Any vermin that are in the burst must leave by the most expedient means possible, and none enter the affected area for a period determined by your Nature check result.&lt;table&gt;Check Result	Duration9 or lower	3 days10–19	1 week20–29	2 weeks30 or higher	1 month&lt;/table&gt;
+            </RulesElement>
+         </loot>
+         <loot count="1" equip-count="1" ShowPowerCard="1" >
+            <RulesElement name="Chainmail" type="Armor" internal-id="ID_FMP_ARMOR_4" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=4&amp;ftype=2" charelem="5" legality="rules-legal" >
+               <specific name="Full Text" > ChainmailDescription: Metal rings woven together into a shirt, leggings, and a hood make up a suit of chainmail. Chainmail grants good protection, but it&apos;s cumbersome, so it reduces your mobility and agility.	Magic appears at higher item levels, and grants higher armor bonuses than its mundane counterparts. Chainmail grants +8 AC at levels 11-15, +9 AC at levels 16-20, +10 AC at levels 21-25, and +12 AC at levels 26-30.AC Bonus: +6Check: -1Speed: -1Weight: 40 lb.Cost: 40 gp.Type: Chainmail </specific>
+               <specific name="Weight" > 40 </specific>
+               <specific name="Armor Bonus" > 6 </specific>
+               <specific name="Check" > -1 </specific>
+               <specific name="Speed" > -1 </specific>
+               <specific name="Gold" > 40 </specific>
+               <specific name="_BaseACPlus1" > 6 </specific>
+               <specific name="_BaseACPlus2" > 7 </specific>
+               <specific name="_BaseACPlus3" > 8 </specific>
+               <specific name="_BaseACPlus4" > 9 </specific>
+               <specific name="_BaseACPlus5" > 10 </specific>
+               <specific name="_BaseACPlus6" > 12 </specific>
+               <specific name="Armor Type" > Heavy </specific>
+               <specific name="Item Slot" > Body </specific>
+               <specific name="Armor Category" > Chain </specific>
+            Metal rings woven together into a shirt, leggings, and a hood make up a suit of chainmail. Chainmail grants good protection, but it&apos;s cumbersome, so it reduces your mobility and agility.	Magic appears at higher item levels, and grants higher armor bonuses than its mundane counterparts. Chainmail grants +8 AC at levels 11-15, +9 AC at levels 16-20, +10 AC at levels 21-25, and +12 AC at levels 26-30.
+            </RulesElement>
+         </loot>
+         <loot count="1" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Adventurer&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_1" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1&amp;ftype=4" charelem="126" legality="rules-legal" >
+               <specific name="Full Text" > Adventurer&apos;s KitCategory: GearPrice: 15 gp Weight: 33 lbDescription: This kit includes a backpack, a bedroll, flint and steel, a belt pouch, two sunrods, ten days&apos; worth of trail rations, 50 feet of hempen rope, and a waterskin. </specific>
+               <specific name="Weight" > 33 </specific>
+               <specific name="Gold" > 15 </specific>
+               <specific name="Category" > Gear </specific>
+               <specific name="count" > 1 </specific>
+            This kit includes a backpack, a bedroll, flint and steel, a belt pouch, two sunrods, ten days&apos; worth of trail rations, 50 feet of hempen rope, and a waterskin.
+            </RulesElement>
+         </loot>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Rod Implement" type="Gear" internal-id="ID_FMP_GEAR_12" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=12&amp;ftype=4" charelem="127" legality="rules-legal" >
+               <specific name="Full Text" > Rod ImplementCategory: GearPrice: 12 gp Weight: 2 lbDescription: Using a nonmagical implement confers no benefit. You can purchase a magic implement to gain an enhancement bonus to attack rolls and damage rolls with your arcane powers. </specific>
+               <specific name="Weight" > 2 </specific>
+               <specific name="Gold" > 12 </specific>
+               <specific name="Category" > Gear </specific>
+               <specific name="count" > 1 </specific>
+               <specific name="Item Slot" > Off-Hand </specific>
+            Using a nonmagical implement confers no benefit. You can purchase a magic implement to gain an enhancement bonus to attack rolls and damage rolls with your arcane powers.
+            </RulesElement>
+         </loot>
+         <loot count="0" equip-count="0" ShowPowerCard="1" >
+            <RulesElement name="Holy Symbol" type="Gear" internal-id="ID_FMP_GEAR_27" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=27&amp;ftype=4" charelem="128" legality="rules-legal" >
+               <specific name="Full Text" > Holy SymbolCategory: GearPrice: 10 gp Weight: 1 lbDescription: This is a finely crafted, nonmagical symbol of precious metal that characters who worship gods might carry as a representation of their deity. </specific>
+               <specific name="Weight" > 1 </specific>
+               <specific name="Gold" > 10 </specific>
+               <specific name="Category" > Gear </specific>
+               <specific name="count" > 1 </specific>
+               <specific name="Item Slot" > Off-Hand </specific>
+            This is a finely crafted, nonmagical symbol of precious metal that characters who worship gods might carry as a representation of their deity.
+            </RulesElement>
+         </loot>
+         <loot count="1" equip-count="1" ShowPowerCard="1" >
+            <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="129" legality="rules-legal" >
+               <specific name="Full Text" > Staff ImplementCategory: GearPrice: 5 gp Weight: 4 lbDescription: Using a nonmagical implement confers no benefit. You can purchase a magical implement to gain an enhancement bonus to attack rolls and damage rolls with your arcane powers. A staff implement can also function as a magic quarterstaff. </specific>
+               <specific name="Weight" > 4 </specific>
+               <specific name="Gold" > 5 </specific>
+               <specific name="Category" > Gear </specific>
+               <specific name="count" > 1 </specific>
+               <specific name="Item Slot" > Off-Hand </specific>
+            Using a nonmagical implement confers no benefit. You can purchase a magical implement to gain an enhancement bonus to attack rolls and damage rolls with your arcane powers. A staff implement can also function as a magic quarterstaff.
+            </RulesElement>
+         </loot>
+      </LootTally>
+
+      <!--
+         The fields for your powers. Each power is then followed
+         by the stats with that power paired with each legal weapon.
+         The weapons are listed in priority as the builder sees it.
+         Particularly, the first weapon listed is the default.
+      -->
+      <PowerStats>
+         <Power name="Melee Basic Attack" >
+            <specific name="Flavor" > You resort to the simple attack you learned when you first picked up a melee weapon. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Basic Attack </specific>
+            <specific name="Keywords" > Weapon </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Melee weapon </specific>
+            <specific name="Target" > One creature </specific>
+            <specific name="Attack" > Strength vs. AC </specific>
+            <specific name="Hit" > 1[W] + Strength modifier damage. </specific>
+            <specific name="	Level 21" > 2[W] + Strength modifier damage. </specific>
+            <Weapon name="Staff Implement" >
+               <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="129" legality="rules-legal" />
+               <AttackBonus> 3 </AttackBonus>
+               <Damage> 1d8 </Damage>
+               <AttackStat> Strength </AttackStat>
+               <Defense> AC </Defense>
+               <HitComponents> +0 Strength modifier.
++0 half your level.
++2 proficiency bonus.
++1 Feat bonus - Staff Expertise
+
+               </HitComponents>
+               <DamageComponents> +0 Strength modifier.
+
+               </DamageComponents>
+               <CritDamage> 8 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+            <Weapon name="Unarmed" >
+               <AttackBonus> 0 </AttackBonus>
+               <Damage> 1d4 </Damage>
+               <AttackStat> Strength </AttackStat>
+               <Defense> AC </Defense>
+               <HitComponents> +0 Strength modifier.
++0 half your level.
+
+               </HitComponents>
+               <DamageComponents> +0 Strength modifier.
+
+               </DamageComponents>
+               <CritDamage> 4 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+         </Power>
+
+         <Power name="Ranged Basic Attack" >
+            <specific name="Flavor" > You resort to the simple attack you learned when you first picked up a ranged weapon. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Basic Attack </specific>
+            <specific name="Keywords" > Weapon </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged weapon </specific>
+            <specific name="Target" > One creature </specific>
+            <specific name="Attack" > Dexterity vs. AC </specific>
+            <specific name="Hit" > 1[W] + Dexterity modifier damage. </specific>
+            <specific name="	Level 21" > 2[W] + Dexterity modifier damage. </specific>
+            <Weapon name="Unarmed" >
+               <AttackBonus> 0 </AttackBonus>
+               <Damage> 1d4 </Damage>
+               <AttackStat> Dexterity </AttackStat>
+               <Defense> AC </Defense>
+               <HitComponents> +0 Dexterity modifier.
++0 half your level.
+
+               </HitComponents>
+               <DamageComponents> +0 Dexterity modifier.
+
+               </DamageComponents>
+               <CritDamage> 4 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+         </Power>
+
+         <Power name="Gaze of the Evil Eye" >
+            <specific name="Flavor" > Your foe feels the foreboding stare of your evil eye warning it away from you. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Oracle of the Evil Eye Attack </specific>
+            <specific name="Keywords" > Arcane, Psychic </specific>
+            <specific name="Action Type" > Minor Action </specific>
+            <specific name="Attack Type" > Ranged 5 </specific>
+            <specific name="Target" > One creature you can see that isn&apos;t marked by you </specific>
+            <specific name="Effect" > The target takes 2 psychic damage whenever it hits you with an attack (a creature can take this damage only once per turn). The effect ends if you don&apos;t have line of sight to the target at the end of your turn, or if you use this power against a different target.	Level 21: 4 psychic damage. </specific>
+            <specific name="Level" />
+            <specific name="Power Type" > Attack </specific>
+            <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_4265 </specific>
+         </Power>
+
+         <Power name="Memory of a Thousand Lifetimes" >
+            <specific name="Flavor" > The dreamlike memories of your previous lives lend insight to aid you. </specific>
+            <specific name="Power Usage" > Encounter </specific>
+            <specific name="Display" > Deva Racial Power </specific>
+            <specific name="Keywords" />
+            <specific name="Action Type" > No Action </specific>
+            <specific name="Attack Type" > Personal </specific>
+            <specific name="Trigger" > You make an attack roll, a saving throw, a skill check, or an ability check and dislike the result </specific>
+            <specific name="Effect" > You add 1d6 to the triggering roll. </specific>
+            <specific name="_ParentFeature" > ID_FMP_RACIAL_TRAIT_1140 </specific>
+            <specific name="Class" > ID_FMP_RACE_35 </specific>
+         </Power>
+
+         <Power name="Maledictor&apos;s Doom" >
+            <specific name="Flavor" > Foes who hear your solemn vow are shaken by its weighty promise. </specific>
+            <specific name="Power Usage" > Encounter </specific>
+            <specific name="Display" > Invoker Feature </specific>
+            <specific name="Keywords" > Divine, Fear </specific>
+            <specific name="Action Type" > Minor Action </specific>
+            <specific name="Attack Type" > Close blast 5 </specific>
+            <specific name="Channel Divinity" > You can use only one channel divinity power per encounter </specific>
+            <specific name="Target" > Each enemy in the blast </specific>
+            <specific name="Effect" > Each target takes a -1 penalty to attack rolls and saving throws until the end of your next turn. In addition, whenever the target is hit by a fear attack before the end of your next turn, you push the target 1 square as a free action. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" />
+            <specific name="Power Type" > Feature </specific>
+            <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_1717 </specific>
+         </Power>
+
+         <Power name="Hand of Radiance" >
+            <specific name="Flavor" > Tendrils of radiance streak from your fingertips across the battlefield. The beams strike your enemies, raining sparks of light on impact. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Radiant </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged 10 </specific>
+            <specific name="Target" > One, two, or three creaturesLevel 21: Target an additional creature. </specific>
+            <specific name="Attack" > Wisdom vs. Reflex </specific>
+            <specific name="Hit" > 1d4 + Wisdom modifier radiant damage. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+            <specific name="_Associated Feats" > ID_FMP_FEAT_1486, ID_FMP_FEAT_1453 </specific>
+            <Weapon name="Staff Implement" >
+               <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="129" legality="rules-legal" />
+               <AttackBonus> 6 </AttackBonus>
+               <Damage> 1d4+5 </Damage>
+               <DamageType> Radiant </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Reflex </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
++1 Feat bonus - Staff Expertise
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 9 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+            <Weapon name="Unarmed" >
+               <AttackBonus> 5 </AttackBonus>
+               <Damage> 1d4+5 </Damage>
+               <DamageType> Radiant </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Reflex </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 9 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+         </Power>
+
+         <Power name="Sun Strike" >
+            <specific name="Flavor" > A beam of radiant energy extends from your hands to bathe a foe in searing light and force it to move. </specific>
+            <specific name="Power Usage" > At-Will </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Radiant </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged 10 </specific>
+            <specific name="Target" > One creature </specific>
+            <specific name="Attack" > Wisdom vs. Reflex </specific>
+            <specific name="Hit" > 1d8 + Wisdom modifier radiant damage, and you slide the target 1 square.Level 21: 2d8 + Wisdom modifier radiant damage. </specific>
+            <specific name="Special" > You can use this power as a ranged basic attack. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+            <specific name="_Associated Feats" > ID_FMP_FEAT_1484, ID_FMP_FEAT_1447, ID_FMP_FEAT_1467, ID_FMP_FEAT_1469 </specific>
+            <specific name="_BasicAttack" > Ranged </specific>
+            <Weapon name="Staff Implement" >
+               <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="129" legality="rules-legal" />
+               <AttackBonus> 6 </AttackBonus>
+               <Damage> 1d8+5 </Damage>
+               <DamageType> Radiant </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Reflex </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
++1 Feat bonus - Staff Expertise
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 13 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+            <Weapon name="Unarmed" >
+               <AttackBonus> 5 </AttackBonus>
+               <Damage> 1d8+5 </Damage>
+               <DamageType> Radiant </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Reflex </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 13 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+         </Power>
+
+         <Power name="Thunder of Judgment" >
+            <specific name="Flavor" > Blasts of thunder rock the air around your foes each time you strike your staff on the ground, leaving them battered and senseless. </specific>
+            <specific name="Power Usage" > Encounter </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Thunder </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Ranged 10 </specific>
+            <specific name="Target" > One, two, or three creatures </specific>
+            <specific name="Attack" > Wisdom vs. Fortitude </specific>
+            <specific name="Hit" > 1d6 + Wisdom modifier thunder damage, or 2d6 + Wisdom modifier thunder damage if you target only one creature. In addition, the target is dazed until the end of your next turn. </specific>
+            <specific name="	Covenant of Wrath" > You also push the target a number of squares equal to your Constitution modifier. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+            <Weapon name="Staff Implement" >
+               <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="129" legality="rules-legal" />
+               <AttackBonus> 6 </AttackBonus>
+               <Damage> 1d6+5 </Damage>
+               <DamageType> Thunder </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Fortitude </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
++1 Feat bonus - Staff Expertise
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 11 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+            <Weapon name="Unarmed" >
+               <AttackBonus> 5 </AttackBonus>
+               <Damage> 1d6+5 </Damage>
+               <DamageType> Thunder </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Fortitude </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 11 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+         </Power>
+
+         <Power name="Silent Malediction" >
+            <specific name="Flavor" > You enter a trance as your lips move. Your enemies don&apos;t hear what you&apos;re saying because of the thunder rumbling around them. </specific>
+            <specific name="Power Usage" > Daily </specific>
+            <specific name="Display" > Invoker Attack 1 </specific>
+            <specific name="Keywords" > Divine, Implement, Thunder </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Close blast 3 </specific>
+            <specific name="Target" > Each creature in the blast </specific>
+            <specific name="Attack" > Wisdom vs. Fortitude </specific>
+            <specific name="Hit" > 2d6 + Wisdom modifier thunder damage, and the target is stunned (save ends). </specific>
+            <specific name="Miss" > Half damage, and the target is dazed until the end of your next turn. </specific>
+            <specific name="Effect" > You are dazed until the end of your next turn. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" > 1 </specific>
+            <specific name="Power Type" > Attack </specific>
+            <Weapon name="Staff Implement" >
+               <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="129" legality="rules-legal" />
+               <AttackBonus> 6 </AttackBonus>
+               <Damage> 2d6+5 </Damage>
+               <DamageType> Thunder </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Fortitude </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
++1 Feat bonus - Staff Expertise
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 17 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+            <Weapon name="Unarmed" >
+               <AttackBonus> 5 </AttackBonus>
+               <Damage> 2d6+5 </Damage>
+               <DamageType> Thunder </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Fortitude </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 17 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+         </Power>
+
+         <Power name="Rebuke Undead" >
+            <specific name="Flavor" > Undead flee and then cower in your presence, their bodies seared by divine light. </specific>
+            <specific name="Power Usage" > Encounter (Special) </specific>
+            <specific name="Display" > Invoker Feature </specific>
+            <specific name="Keywords" > Divine, Implement, Radiant </specific>
+            <specific name="Action Type" > Standard Action </specific>
+            <specific name="Attack Type" > Close blast 5 </specific>
+            <specific name="Channel Divinity" > You can use only one channel divinity power per encounter. </specific>
+            <specific name="Target" > Each undead creature in the blast </specific>
+            <specific name="Attack" > Wisdom vs. Will </specific>
+            <specific name="Hit" > 1d10 + Wisdom modifier radiant damage. You push the target 2 squares, and it is dazed until the end of your next turn.Level 5: 2d10 + Wisdom modifier radiant damage.Level 11: 3d10 + Wisdom modifier radiant damage.Level 15: 4d10 + Wisdom modifier radiant damage.Level 21: 5d10 + Wisdom modifier radiant damage.Level 25: 6d10 + Wisdom modifier radiant damage. </specific>
+            <specific name="Miss" > Half damage. </specific>
+            <specific name="Class" > ID_FMP_CLASS_127 </specific>
+            <specific name="Level" />
+            <specific name="Power Type" > Feature </specific>
+            <specific name="_ParentFeature" > ID_FMP_CLASS_FEATURE_324 </specific>
+            <Weapon name="Staff Implement" >
+               <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="129" legality="rules-legal" />
+               <AttackBonus> 6 </AttackBonus>
+               <Damage> 1d10+5 </Damage>
+               <DamageType> Radiant </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Will </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
++1 Feat bonus - Staff Expertise
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 15 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+            <Weapon name="Unarmed" >
+               <AttackBonus> 5 </AttackBonus>
+               <Damage> 1d10+5 </Damage>
+               <DamageType> Radiant </DamageType>
+               <AttackStat> Wisdom </AttackStat>
+               <Defense> Will </Defense>
+               <HitComponents> +5 Wisdom modifier.
++0 half your level.
+
+               </HitComponents>
+               <DamageComponents> +5 Wisdom modifier.
+
+               </DamageComponents>
+               <CritDamage> 15 </CritDamage>
+               <CritRange> 20 </CritRange>
+            </Weapon>
+         </Power>
+
+      </PowerStats>
+
+
+      <!--
+         The character&apos;s companions
+      -->
+      <Companions>
+      </Companions>
+
+
+      <!--
+         The character&apos;s journal entries
+      -->
+      <Journal>
+      </Journal>
+
+   </CharacterSheet>
+
+   <!--
+      Level tags are an internal tree of rules elements, see RulesElementTally
+      above for the final list of rules elements,  taking into account
+      retraining, etc.
+   -->
+   <Level>
+      <RulesElement name="1" type="Level" internal-id="ID_INTERNAL_LEVEL_1" charelem="3" legality="rules-legal" >
+         <RulesElement name="Level1Rules" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_LEVEL1RULES" charelem="20" legality="rules-legal" >
+            <RulesElement name="SkillRules" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_SKILLRULES" charelem="7" legality="rules-legal" >
+               <RulesElement name="Acrobatics" type="Skill" internal-id="ID_FMP_SKILL_1" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=1" charelem="21" legality="rules-legal" />
+               <RulesElement name="Arcana" type="Skill" internal-id="ID_FMP_SKILL_2" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=2" charelem="22" legality="rules-legal" />
+               <RulesElement name="Bluff" type="Skill" internal-id="ID_FMP_SKILL_3" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=3" charelem="23" legality="rules-legal" />
+               <RulesElement name="Diplomacy" type="Skill" internal-id="ID_FMP_SKILL_6" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=6" charelem="24" legality="rules-legal" />
+               <RulesElement name="Dungeoneering" type="Skill" internal-id="ID_FMP_SKILL_7" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=7" charelem="25" legality="rules-legal" />
+               <RulesElement name="Endurance" type="Skill" internal-id="ID_FMP_SKILL_8" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=8" charelem="26" legality="rules-legal" />
+               <RulesElement name="Heal" type="Skill" internal-id="ID_FMP_SKILL_9" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=9" charelem="27" legality="rules-legal" />
+               <RulesElement name="History" type="Skill" internal-id="ID_FMP_SKILL_11" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=11" charelem="28" legality="rules-legal" />
+               <RulesElement name="Insight" type="Skill" internal-id="ID_FMP_SKILL_13" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=13" charelem="29" legality="rules-legal" />
+               <RulesElement name="Intimidate" type="Skill" internal-id="ID_FMP_SKILL_14" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=14" charelem="30" legality="rules-legal" />
+               <RulesElement name="Nature" type="Skill" internal-id="ID_FMP_SKILL_16" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=16" charelem="31" legality="rules-legal" />
+               <RulesElement name="Perception" type="Skill" internal-id="ID_FMP_SKILL_17" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=17" charelem="32" legality="rules-legal" />
+               <RulesElement name="Religion" type="Skill" internal-id="ID_FMP_SKILL_18" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=18" charelem="33" legality="rules-legal" />
+               <RulesElement name="Stealth" type="Skill" internal-id="ID_FMP_SKILL_20" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=20" charelem="34" legality="rules-legal" />
+               <RulesElement name="Streetwise" type="Skill" internal-id="ID_FMP_SKILL_21" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=21" charelem="35" legality="rules-legal" />
+               <RulesElement name="Thievery" type="Skill" internal-id="ID_FMP_SKILL_23" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=23" charelem="36" legality="rules-legal" />
+               <RulesElement name="Athletics" type="Skill" internal-id="ID_FMP_SKILL_27" url="http://www.wizards.com/dndinsider/compendium/skill.aspx?id=27" charelem="37" legality="rules-legal" />
+            </RulesElement>
+            <RulesElement name="Heroic" type="Tier" internal-id="ID_INTERNAL_TIER_HEROIC" charelem="38" legality="rules-legal" />
+            <RulesElement name="Melee Basic Attack" type="Power" internal-id="ID_INTERNAL_POWER_MELEE_BASIC_ATTACK" charelem="39" legality="rules-legal" />
+            <RulesElement name="Ranged Basic Attack" type="Power" internal-id="ID_INTERNAL_POWER_RANGED_BASIC_ATTACK" charelem="40" legality="rules-legal" />
+         </RulesElement>
+         <RulesElement name="DetailsRules" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_DETAILSRULES" charelem="41" legality="rules-legal" >
+            <RulesElement name="female" type="Gender" internal-id="ID_INTERNAL_GENDER_FEMALE" charelem="42" legality="rules-legal" />
+            <RulesElement name="" type="" charelem="130" legality="rules-legal" />
+         </RulesElement>
+         <RulesElement name="Expansion1" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION1" charelem="43" legality="rules-legal" >
+            <RulesElement name="Keepers of the Internal Sun" type="Background" internal-id="ID_FMP_BACKGROUND_667" charelem="44" legality="rules-legal" >
+               <RulesElement name="Draconic" type="Background Association" internal-id="ID_INTERNAL_BACKGROUND_ASSOCIATION_DRACONIC" charelem="45" legality="rules-legal" />
+               <RulesElement name="History" type="Background Association" internal-id="ID_INTERNAL_BACKGROUND_ASSOCIATION_HISTORY" charelem="46" legality="rules-legal" />
+               <RulesElement name="Perception" type="Background Association" internal-id="ID_INTERNAL_BACKGROUND_ASSOCIATION_PERCEPTION" charelem="47" legality="rules-legal" />
+            </RulesElement>
+            <RulesElement name="Background Benefit" type="Internal" internal-id="ID_INTERNAL_INTERNAL_BACKGROUND_BENEFIT" charelem="48" legality="rules-legal" >
+               <RulesElement name="Perception class skill" type="Background Choice" internal-id="ID_INTERNAL_BACKGROUND_CHOICE_PERCEPTION_CLASS_SKILL" charelem="49" legality="rules-legal" />
+            </RulesElement>
+            <RulesElement name="" type="" charelem="131" legality="rules-legal" />
+            <RulesElement name="" type="" charelem="132" legality="rules-legal" />
+            <RulesElement name="" type="" charelem="133" legality="rules-legal" />
+            <RulesElement name="" type="" charelem="134" legality="rules-legal" />
+            <RulesElement name="" type="" charelem="135" legality="rules-legal" />
+         </RulesElement>
+         <RulesElement name="Expansion2" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION2" charelem="50" legality="rules-legal" >
+            <RulesElement name="Oracle of the Evil Eye" type="Theme" internal-id="ID_FMP_THEME_938" charelem="51" legality="rules-legal" >
+               <RulesElement name="Oracle of the Evil Eye Starting Feature" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_4265" charelem="52" legality="rules-legal" >
+                  <RulesElement name="Gaze of the Evil Eye" type="Power" internal-id="ID_FMP_POWER_16022" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=16022" charelem="53" legality="rules-legal" />
+               </RulesElement>
+               <RulesElement name="Oracle of the Evil Eye Level 10 Feature" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_4267" charelem="136" legality="rules-legal" />
+               <RulesElement name="Oracle of the Evil Eye Level 5 Feature" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_4266" charelem="137" legality="rules-legal" />
+            </RulesElement>
+         </RulesElement>
+         <RulesElement name="Expansion3" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION3" charelem="54" legality="rules-legal" />
+         <RulesElement name="Expansion4" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION4" charelem="55" legality="rules-legal" />
+         <RulesElement name="Expansion5" type="Level1Rules" internal-id="ID_INTERNAL_LEVEL1RULES_EXPANSION5" charelem="56" legality="rules-legal" />
+         <RulesElement name="Deva" type="Race" internal-id="ID_FMP_RACE_35" url="http://www.wizards.com/dndinsider/compendium/race.aspx?id=35" charelem="14" legality="rules-legal" >
+            <RulesElement name="Deva" type="Grants" internal-id="ID_INTERNAL_GRANTS_DEVA" charelem="57" legality="rules-legal" >
+               <RulesElement name="Medium" type="Size" internal-id="ID_INTERNAL_SIZE_MEDIUM" charelem="58" legality="rules-legal" />
+               <RulesElement name="Normal" type="Vision" internal-id="ID_INTERNAL_VISION_NORMAL" charelem="59" legality="rules-legal" />
+               <RulesElement name="Astral Majesty" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1137" charelem="4" legality="rules-legal" />
+               <RulesElement name="Astral Resistance" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1138" charelem="15" legality="rules-legal" />
+               <RulesElement name="Immortal Origin" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1139" charelem="60" legality="rules-legal" />
+               <RulesElement name="Memory of a Thousand Lifetimes" type="Racial Trait" internal-id="ID_FMP_RACIAL_TRAIT_1140" charelem="61" legality="rules-legal" >
+                  <RulesElement name="Memory of a Thousand Lifetimes" type="Power" internal-id="ID_FMP_POWER_6186" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=6186" charelem="62" legality="rules-legal" />
+               </RulesElement>
+               <RulesElement name="Wisdom" type="Race Ability Bonus" internal-id="ID_INTERNAL_RACE_ABILITY_BONUS_WISDOM" charelem="2" legality="rules-legal" />
+               <RulesElement name="Common" type="Language" internal-id="ID_FMP_LANGUAGE_1" charelem="16" legality="rules-legal" />
+               <RulesElement name="History Bonus" type="Racial Trait" internal-id="ID_INTERNAL_RACIAL_TRAIT_HISTORY_BONUS" charelem="9" legality="rules-legal" />
+               <RulesElement name="Religion Bonus" type="Racial Trait" internal-id="ID_INTERNAL_RACIAL_TRAIT_RELIGION_BONUS" charelem="13" legality="rules-legal" />
+            </RulesElement>
+            <RulesElement name="Intelligence" type="Race Ability Bonus" internal-id="ID_INTERNAL_RACE_ABILITY_BONUS_INTELLIGENCE" charelem="1" legality="rules-legal" />
+            <RulesElement name="Elven" type="Language" internal-id="ID_FMP_LANGUAGE_4" charelem="17" legality="rules-legal" />
+            <RulesElement name="Dwarven" type="Language" internal-id="ID_FMP_LANGUAGE_3" charelem="18" legality="rules-legal" />
+         </RulesElement>
+         <RulesElement name="Invoker" type="Class" internal-id="ID_FMP_CLASS_127" url="http://www.wizards.com/dndinsider/compendium/class.aspx?id=127" charelem="6" legality="rules-legal" >
+            <RulesElement name="Invoker" type="Grants" internal-id="ID_INTERNAL_GRANTS_INVOKER" charelem="63" legality="rules-legal" >
+               <RulesElement name="Controller" type="Role" internal-id="ID_FMP_ROLE_1" charelem="64" legality="rules-legal" />
+               <RulesElement name="Divine" type="Power Source" internal-id="ID_FMP_POWER_SOURCE_3" charelem="65" legality="rules-legal" />
+               <RulesElement name="Armor Proficiency (Cloth)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(CLOTH)" charelem="66" legality="rules-legal" />
+               <RulesElement name="Armor Proficiency (Leather)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(LEATHER)" charelem="67" legality="rules-legal" />
+               <RulesElement name="Armor Proficiency (Hide)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(HIDE)" charelem="68" legality="rules-legal" />
+               <RulesElement name="Armor Proficiency (Chainmail)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_ARMOR_PROFICIENCY_(CHAINMAIL)" charelem="69" legality="rules-legal" />
+               <RulesElement name="Simple Melee" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_SIMPLE_MELEE" charelem="70" legality="rules-legal" >
+                  <RulesElement name="Weapon Proficiency (Club)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CLUB)" charelem="71" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Dagger)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(DAGGER)" charelem="72" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Javelin)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(JAVELIN)" charelem="73" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Mace)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(MACE)" charelem="74" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Sickle)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SICKLE)" charelem="75" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Spear)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SPEAR)" charelem="76" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Greatclub)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(GREATCLUB)" charelem="77" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Morningstar)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(MORNINGSTAR)" charelem="78" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Quarterstaff)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(QUARTERSTAFF)" charelem="79" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Scythe)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SCYTHE)" charelem="80" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Spiked gauntlet)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SPIKED_GAUNTLET)" charelem="81" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Talid)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(TALID)" charelem="82" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Widow&apos;s knife)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(WIDOW&apos;S_KNIFE)" charelem="83" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Wrist razors)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(WRIST_RAZORS)" charelem="84" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Light mace)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(LIGHT_MACE)" charelem="85" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Short spear)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SHORT_SPEAR)" charelem="86" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Claw Fighter Claw)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CLAW_FIGHTER_CLAW)" charelem="87" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Shadowblade)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SHADOWBLADE)" charelem="88" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Climbing Claw)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CLIMBING_CLAW)" charelem="89" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Dragontooth Shield (Heroic Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(DRAGONTOOTH_SHIELD_(HEROIC_TIER))" charelem="90" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Fighting Shield (Heroic Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(FIGHTING_SHIELD_(HEROIC_TIER))" charelem="91" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Soul Shield (Paragon Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SOUL_SHIELD_(PARAGON_TIER))" charelem="92" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Sun Shield (Paragon Tier))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SUN_SHIELD_(PARAGON_TIER))" charelem="93" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Rod of Seven Parts (Weapon))" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(ROD_OF_SEVEN_PARTS_(WEAPON))" charelem="94" legality="rules-legal" />
+               </RulesElement>
+               <RulesElement name="Simple Ranged" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_SIMPLE_RANGED" charelem="95" legality="rules-legal" >
+                  <RulesElement name="Weapon Proficiency (Hand crossbow)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(HAND_CROSSBOW)" charelem="96" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Sling)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(SLING)" charelem="97" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Crossbow)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(CROSSBOW)" charelem="98" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Repeating crossbow)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(REPEATING_CROSSBOW)" charelem="99" legality="rules-legal" />
+                  <RulesElement name="Weapon Proficiency (Dejada)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_WEAPON_PROFICIENCY_(DEJADA)" charelem="100" legality="rules-legal" />
+               </RulesElement>
+               <RulesElement name="Channel Divinity" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_324" charelem="101" legality="rules-legal" >
+                  <RulesElement name="" type="" charelem="138" legality="rules-legal" />
+                  <RulesElement name="" type="" charelem="139" legality="rules-legal" />
+                  <RulesElement name="Divine Mettle" type="Power" internal-id="ID_FMP_POWER_1746" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=1746" charelem="140" legality="rules-legal" />
+                  <RulesElement name="Divine Strength" type="Power" internal-id="ID_FMP_POWER_1747" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=1747" charelem="141" legality="rules-legal" />
+                  <RulesElement name="Abjure Undead" type="Power" internal-id="ID_FMP_POWER_5330" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=5330" charelem="142" legality="rules-legal" />
+                  <RulesElement name="Divine Guidance" type="Power" internal-id="ID_FMP_POWER_5331" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=5331" charelem="143" legality="rules-legal" />
+                  <RulesElement name="Rebuke Undead" type="Power" internal-id="ID_FMP_POWER_5186" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=5186" charelem="122" legality="rules-legal" />
+               </RulesElement>
+               <RulesElement name="Divine Covenant" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_1156" charelem="102" legality="rules-legal" >
+                  <RulesElement name="Covenant of Malediction" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_1717" charelem="103" legality="rules-legal" >
+                     <RulesElement name="Maledictor&apos;s Doom" type="Power" internal-id="ID_FMP_POWER_7150" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=7150" charelem="104" legality="rules-legal" />
+                  </RulesElement>
+               </RulesElement>
+               <RulesElement name="Ritual Casting" type="Class Feature" internal-id="ID_FMP_CLASS_FEATURE_683" charelem="105" legality="rules-legal" >
+                  <RulesElement name="Alchemist" type="Feat" internal-id="ID_FMP_FEAT_652" url="http://www.wizards.com/dndinsider/compendium/feat.aspx?id=652" charelem="106" legality="rules-legal" >
+                     <RulesElement name="Alchemical Items" type="Internal" internal-id="ID_INTERNAL_INTERNAL_ALCHEMICAL_ITEMS" charelem="107" legality="rules-legal" />
+                  </RulesElement>
+               </RulesElement>
+               <RulesElement name="Religion" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_RELIGION" charelem="12" legality="rules-legal" />
+               <RulesElement name="Invoker Implements" type="Grants" internal-id="ID_INTERNAL_GRANTS_INVOKER_IMPLEMENTS" charelem="108" legality="rules-legal" >
+                  <RulesElement name="Implement Proficiency (Rod)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_IMPLEMENT_PROFICIENCY_(ROD)" charelem="109" legality="rules-legal" />
+                  <RulesElement name="Implement Proficiency (Staff)" type="Proficiency" internal-id="ID_INTERNAL_PROFICIENCY_IMPLEMENT_PROFICIENCY_(STAFF)" charelem="110" legality="rules-legal" />
+               </RulesElement>
+               <RulesElement name="Ritual Book" type="Gear" internal-id="ID_FMP_GEAR_31" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=31&amp;ftype=4" charelem="111" legality="rules-legal" />
+               <RulesElement name="Hand of Fate" type="Ritual" internal-id="ID_FMP_RITUAL_16" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=16" charelem="112" legality="rules-legal" />
+            </RulesElement>
+            <RulesElement name="Hand of Radiance" type="Power" internal-id="ID_FMP_POWER_7151" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=7151" charelem="113" legality="rules-legal" />
+            <RulesElement name="Sun Strike" type="Power" internal-id="ID_FMP_POWER_5137" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=5137" charelem="114" legality="rules-legal" />
+            <RulesElement name="" type="" charelem="144" legality="rules-legal" />
+            <RulesElement name="Insight" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_INSIGHT" charelem="10" legality="rules-legal" />
+            <RulesElement name="Perception" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_PERCEPTION" charelem="11" legality="rules-legal" />
+            <RulesElement name="History" type="Skill Training" internal-id="ID_INTERNAL_SKILL_TRAINING_HISTORY" charelem="8" legality="rules-legal" />
+            <RulesElement name="Banish Vermin" type="Ritual" internal-id="ID_FMP_RITUAL_101" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=101" charelem="115" legality="rules-legal" />
+         </RulesElement>
+         <RulesElement name="Staff Expertise" type="Feat" internal-id="ID_FMP_FEAT_3151" url="http://www.wizards.com/dndinsider/compendium/feat.aspx?id=3151" charelem="19" legality="rules-legal" />
+         <RulesElement name="Thunder of Judgment" type="Power" internal-id="ID_FMP_POWER_2853" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=2853" charelem="116" legality="rules-legal" />
+         <RulesElement name="Silent Malediction" type="Power" internal-id="ID_FMP_POWER_7161" url="http://www.wizards.com/dndinsider/compendium/power.aspx?id=7161" charelem="117" legality="rules-legal" />
+         <RulesElement name="Pelor" type="Deity" internal-id="ID_FMP_DEITY_9" charelem="118" legality="rules-legal" >
+            <RulesElement name="Hope" type="Domain" internal-id="ID_FMP_DOMAIN_11" charelem="119" legality="rules-legal" />
+            <RulesElement name="Life" type="Domain" internal-id="ID_FMP_DOMAIN_14" charelem="120" legality="rules-legal" />
+            <RulesElement name="Sun" type="Domain" internal-id="ID_FMP_DOMAIN_26" charelem="121" legality="rules-legal" />
+         </RulesElement>
+      </RulesElement>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Ritual Book" type="Gear" internal-id="ID_FMP_GEAR_31" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=31&amp;ftype=4" charelem="145" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Hand of Fate" type="Ritual" internal-id="ID_FMP_RITUAL_16" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=16" charelem="146" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Banish Vermin" type="Ritual" internal-id="ID_FMP_RITUAL_101" url="http://www.wizards.com/dndinsider/compendium/ritual.aspx?id=101" charelem="147" legality="rules-legal" />
+      </loot>
+      <loot count="1" equip-count="1" ShowPowerCard="1" >
+         <RulesElement name="Chainmail" type="Armor" internal-id="ID_FMP_ARMOR_4" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=4&amp;ftype=2" charelem="148" legality="rules-legal" />
+      </loot>
+      <loot count="1" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Adventurer&apos;s Kit" type="Gear" internal-id="ID_FMP_GEAR_1" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=1&amp;ftype=4" charelem="149" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Rod Implement" type="Gear" internal-id="ID_FMP_GEAR_12" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=12&amp;ftype=4" charelem="150" legality="rules-legal" />
+      </loot>
+      <loot count="0" equip-count="0" ShowPowerCard="1" >
+         <RulesElement name="Holy Symbol" type="Gear" internal-id="ID_FMP_GEAR_27" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=27&amp;ftype=4" charelem="151" legality="rules-legal" />
+      </loot>
+      <loot count="1" equip-count="1" ShowPowerCard="1" >
+         <RulesElement name="Staff Implement" type="Gear" internal-id="ID_FMP_GEAR_13" url="http://www.wizards.com/dndinsider/compendium/item.aspx?fid=13&amp;ftype=4" charelem="152" legality="rules-legal" />
+      </loot>
+   </Level>
+
+
+   <!--
+      Textstrings are builder variables and contain entered text data, such
+      as character names, as well as internal data
+   -->
+   <textstring name="_PER_LEVEL_1_Carried Money" >
+      40 gp
+   </textstring>
+   <textstring name="_PER_LEVEL_1_Stored Money" >
+      0 gp
+   </textstring>
+   <textstring name="_PER_LEVEL_1_Residuum" >
+      0
+   </textstring>
+   <textstring name="CampaignSettingID" >
+      &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ContentIdentifier xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/WotC.ContentVault&quot;&gt;&lt;ContentID&gt;1&lt;/ContentID&gt;&lt;Official&gt;true&lt;/Official&gt;&lt;OfficialTypeID i:nil=&quot;true&quot; /&gt;&lt;ScratchID i:nil=&quot;true&quot; /&gt;&lt;TypeID&gt;1&lt;/TypeID&gt;&lt;/ContentIdentifier&gt;
+   </textstring>
+   <textstring name="ID_FMP_GEAR_31" >
+      Given
+   </textstring>
+   <textstring name="ID_FMP_RITUAL_16" >
+      Given
+   </textstring>
+   <textstring name="ID_FMP_RITUAL_101" >
+      Given
+   </textstring>
+   <textstring name="PortraitID" >
+      &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;ContentIdentifier xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/WotC.ContentVault&quot;&gt;&lt;ContentID&gt;10000181&lt;/ContentID&gt;&lt;Official&gt;true&lt;/Official&gt;&lt;OfficialTypeID i:nil=&quot;true&quot; /&gt;&lt;ScratchID i:nil=&quot;true&quot; /&gt;&lt;TypeID&gt;2&lt;/TypeID&gt;&lt;/ContentIdentifier&gt;
+   </textstring>
+   <textstring name="PortraitExplicitlySet" >
+      True
+   </textstring>
+   <textstring name="name" >
+      Jael
+   </textstring>
+   <textstring name="_Portrait_Position_" >
+      0 0 1 1
+   </textstring>
+   <textstring name="Custom Character Portrait" >
+      
+   </textstring>
+   <textstring name="_INTERNAL_MainHandWeapon" >
+      Staff Implement
+   </textstring>
+   <textstring name="Height" >
+      6&apos;5&quot;
+   </textstring>
+   <textstring name="Weight" >
+      180
+   </textstring>
+   <textstring name="Age" >
+      19
+   </textstring>
+   <textstring name="Character Save File" >
+      C:\Windows\TEMP\tmp5966.tmp
+   </textstring>
+
+
+</D20Character>
