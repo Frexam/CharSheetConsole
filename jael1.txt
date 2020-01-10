@@ -1,0 +1,184 @@
+Name: Jael
+Class: Invoker
+Background: Keepers of the Internal Sun
+Theme: Oracle of the Evil Eye
+Race: Deva
+Gender: female
+Deity: Pelor
+Alignment: 
+Level: 1
+Initiative: +0
+Speed: 5
+Action Points: 1
+
+Defenses
+AC: 16
+Fortitude: 13
+Reflex: 11
+Will: 16
+
+Health
+HP: 24
+Temp HP: 0
+Healing Surge Value: 6
+Healing Surges: 8
+Failed Death Saves: 0
+
+Abilities
+STR: 10 +0
+CON: 14 +2
+DEX: 10 +0
+INT: 11 +0
+WIS: 20 +5
+CHA: 10 +0
+
+Resistances
+necrotic: 5
+radiant: 5
+
+Skills
+Acrobatics: -1 
+Athletics: -1 
+Arcana: +0 
+Bluff: +0 
+Diplomacy: +0 
+Dungeoneering: +5 
+Endurance: +1 
+Heal: +5 
+History: +7 trained
+Insight: +10 trained
+Intimidate: +0 
+Nature: +5 
+Perception: +10 trained
+Religion: +7 trained
+Stealth: -1 
+Streetwise: +0 
+Thievery: -1 
+
+Senses
+Passive Insight: 20
+Passive Perception: 20
+Vision: Normal
+
+Class Features
+Oracle of the Evil Eye Starting Feature: Gain the gaze of the evil eye power
+Channel Divinity: Invoke a channel divinity class feature or other power; encounter.
+Divine Covenant: Choose a Divine Covenant option
+Covenant of Malediction: The gods entrust you with the invocations of destruction use...
+Ritual Casting: Gain Ritual Caster as a bonus feat. In addition, you possess a ritual book, and it contains two 1st-level rituals of your choice that you have mastered.
+
+Traits
+Astral Majesty: +1 bonus to all defenses against bloodied creatures
+Astral Resistance: Resist necrotic and resist radiant equal to 5 + one-half your level
+Immortal Origin: Immortal creature origin
+Memory of a Thousand Lifetimes: Have the memory of a thousand lifetimes power
+History Bonus: Gain a +2 racial bonus to History.
+Religion Bonus: Gain a +2 racial bonus to Religion.
+
+Feats
+Alchemist: Create alchemical items; can replace Ritual Caster class feature
+Staff Expertise: While using a staff as a weapon or implement: +1/2/3 to attack rolls, ranged attacks don't provoke opportunity attacks, +1 reach
+
+Powers
+Melee Basic Attack
+At-Will <> Standard Action
+Melee weapon
+Target: One creature
+You resort to the simple attack you learned when you first picked up a melee weapon.
+Keywords: Weapon
+Attack: Strength vs. AC
+Hit: 1[W] + Strength modifier damage.
+	Level 21: 2[W] + Strength modifier damage.
+Staff Implement: +3 vs AC, 1d8; critical 8
+
+Ranged Basic Attack
+At-Will <> Standard Action
+Ranged weapon
+Target: One creature
+You resort to the simple attack you learned when you first picked up a ranged weapon.
+Keywords: Weapon
+Attack: Dexterity vs. AC
+Hit: 1[W] + Dexterity modifier damage.
+	Level 21: 2[W] + Dexterity modifier damage.
+Unarmed: +0 vs AC, 1d4; critical 4
+
+Gaze of the Evil Eye
+At-Will <> Minor Action
+Ranged 5
+Target: One creature you can see that isn't marked by you
+Your foe feels the foreboding stare of your evil eye warning it away from you.
+Keywords: Arcane, Psychic
+Effect: The target takes 2 psychic damage whenever it hits you with an attack (a creature can take this damage only once per turn). The effect ends if you don't have line of sight to the target at the end of your turn, or if you use this power against a different target. Level 21: 4 psychic damage.
+
+Memory of a Thousand Lifetimes
+Encounter <> No Action
+Personal
+The dreamlike memories of your previous lives lend insight to aid you.
+Trigger: You make an attack roll, a saving throw, a skill check, or an ability check and dislike the result
+Effect: You add 1d6 to the triggering roll.
+
+Maledictor's Doom
+Encounter <> Minor Action
+Close blast 5
+Target: Each enemy in the blast
+Foes who hear your solemn vow are shaken by its weighty promise.
+Keywords: Divine, Fear
+Channel Divinity: You can use only one channel divinity power per encounter
+Effect: Each target takes a -1 penalty to attack rolls and saving throws until the end of your next turn. In addition, whenever the target is hit by a fear attack before the end of your next turn, you push the target 1 square as a free action.
+
+Hand of Radiance
+At-Will <> Standard Action
+Ranged 10
+Target: One, two, or three creatures Level 21: Target an additional creature.
+Tendrils of radiance streak from your fingertips across the battlefield. The beams strike your enemies, raining sparks of light on impact.
+Keywords: Divine, Implement, Radiant
+Attack: Wisdom vs. Reflex
+Hit: 1d4 + Wisdom modifier radiant damage.
+Staff Implement: +6 vs Reflex, 1d4+5 Radiant; critical 9
+
+Sun Strike
+At-Will <> Standard Action
+Ranged 10
+Target: One creature
+A beam of radiant energy extends from your hands to bathe a foe in searing light and force it to move.
+Keywords: Divine, Implement, Radiant
+Attack: Wisdom vs. Reflex
+Hit: 1d8 + Wisdom modifier radiant damage, and you slide the target 1 square. Level 21: 2d8 + Wisdom modifier radiant damage.
+Special: You can use this power as a ranged basic attack.
+Staff Implement: +6 vs Reflex, 1d8+5 Radiant; critical 13
+
+Thunder of Judgment
+Encounter <> Standard Action
+Ranged 10
+Target: One, two, or three creatures
+Blasts of thunder rock the air around your foes each time you strike your staff on the ground, leaving them battered and senseless.
+Keywords: Divine, Implement, Thunder
+Attack: Wisdom vs. Fortitude
+Hit: 1d6 + Wisdom modifier thunder damage, or 2d6 + Wisdom modifier thunder damage if you target only one creature. In addition, the target is dazed until the end of your next turn.
+	Covenant of Wrath: You also push the target a number of squares equal to your Constitution modifier.
+Staff Implement: +6 vs Fortitude, 1d6+5 Thunder; critical 11
+
+Silent Malediction
+Daily <> Standard Action
+Close blast 3
+Target: Each creature in the blast
+You enter a trance as your lips move. Your enemies don't hear what you're saying because of the thunder rumbling around them.
+Keywords: Divine, Implement, Thunder
+Attack: Wisdom vs. Fortitude
+Hit: 2d6 + Wisdom modifier thunder damage, and the target is stunned (save ends).
+Miss: Half damage, and the target is dazed until the end of your next turn.
+Effect: You are dazed until the end of your next turn.
+Staff Implement: +6 vs Fortitude, 2d6+5 Thunder; critical 17
+
+Rebuke Undead
+Encounter (Special) <> Standard Action
+Close blast 5
+Target: Each undead creature in the blast
+Undead flee and then cower in your presence, their bodies seared by divine light.
+Keywords: Divine, Implement, Radiant
+Channel Divinity: You can use only one channel divinity power per encounter.
+Attack: Wisdom vs. Will
+Hit: 1d10 + Wisdom modifier radiant damage. You push the target 2 squares, and it is dazed until the end of your next turn. Level 5: 2d10 + Wisdom modifier radiant damage. Level 11: 3d10 + Wisdom modifier radiant damage. Level 15: 4d10 + Wisdom modifier radiant damage. Level 21: 5d10 + Wisdom modifier radiant damage. Level 25: 6d10 + Wisdom modifier radiant damage.
+Miss: Half damage.
+Staff Implement: +6 vs Will, 1d10+5 Radiant; critical 15
+
